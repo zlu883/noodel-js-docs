@@ -1,4 +1,4 @@
-# Noodel.js
+# js.noodel.io
 
 <img alt="Noodel logo" src="assets/logo_v8_textless_512x512.svg" width="90">
 
