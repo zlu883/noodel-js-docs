@@ -7,6 +7,7 @@ window.addEventListener("load", function() {
             swipeMultiplierTrunk: 0.9,
             swipeMultiplierBranch: 0.7,
             snapMultiplierTrunk: 0.8,
+            //orientation: 'ttb',
             onFocalNodeChange: function(current) {
                 const index = current.getIndex() + 1;
                 const total = current.getParent().getChildCount();

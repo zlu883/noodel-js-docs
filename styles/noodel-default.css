@@ -1,0 +1,282 @@
+/* All timing functions use easeOutCubic from Penner equations */
+
+.nd-canvas {
+    outline: none;
+    background-color: #c0c0c0;
+    cursor: grab;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nd-limit {
+	border: solid 0px;
+	background-color: #595959;
+}
+
+.nd-limit-enter-from, .nd-limit-leave-active {
+	opacity: 0;
+}
+
+.nd-limit-enter-active, .nd-limit-leave-active {
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nd-limit-left {
+	top: 0;
+	left: 0;
+	height: 100%;
+    width: 2em;
+    transform-origin: left;
+}
+
+.nd-limit-left.nd-limit-enter-from, 
+.nd-limit-left.nd-limit-leave-active,
+.nd-limit-right.nd-limit-enter-from,
+.nd-limit-right.nd-limit-leave-active {
+	transform: scaleX(0.5);
+}
+
+.nd-limit-top.nd-limit-enter-from, 
+.nd-limit-top.nd-limit-leave-active,
+.nd-limit-bottom.nd-limit-enter-from,
+.nd-limit-bottom.nd-limit-leave-active {
+	transform: scaleY(0.5);
+}
+
+.nd-limit-right {
+	top: 0;
+	right: 0;
+	height: 100%;
+    width: 2em;
+    transform-origin: right;
+}
+
+.nd-limit-top {
+	top: 0;
+	left: 0;
+	height: 2em;
+    width: 100%;
+    transform-origin: top;
+}
+
+.nd-limit-bottom {
+	bottom: 0;
+	left: 0;
+	height: 2em;
+    width: 100%;
+    transform-origin: bottom;
+}
+
+.nd-trunk-move {
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nd-branch {
+	opacity: 0.75;
+	transition-property: opacity;
+	transition-timing-function: cubic-bezier( 0.215, 0.61, 0.355, 1);
+	transition-duration: 0.5s;
+}
+
+.nd-branch-focal {
+	opacity: 1;
+}
+
+.nd-branch-enter-from, .nd-branch-leave-active {
+	opacity: 0;
+}
+
+.nd-branch-slider-move {
+	transition-property: transform;
+	transition-timing-function: cubic-bezier( 0.215, 0.61, 0.355, 1);
+	transition-duration: 0.5s;
+}
+
+.nd-node {
+    padding: .2em .3em;
+	display: flex;
+    flex-direction: column;
+}
+
+.nd-canvas-ttb .nd-node, .nd-canvas-btt .nd-node {
+    padding: .3em .2em;
+	flex-direction: row;
+}
+
+.nd-content-box {
+    box-sizing: border-box;
+    border-radius: .7em;
+    background-color: #eeeeee;
+}
+
+.nd-content-box > *:first-child {
+    margin-top: 0;
+}
+
+.nd-content-box > *:last-child {
+    margin-bottom: 0;
+}
+
+.nd-node-active > .nd-content-box, .nd-child-indicator-active {
+    background-color: white;
+}
+
+.nd-inspect-backdrop {
+	background-color: rgba(0, 0, 0, 0.4);
+    cursor: auto;
+    height: 100vh;
+	width: 100vw;
+}
+
+.nd-inspect-backdrop-enter-from, .nd-inspect-backdrop-leave-active {
+	opacity: 0;
+}
+
+.nd-inspect-backdrop-enter-active, .nd-inspect-backdrop-leave-active {
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nd-content-box {
+	position: relative;
+	padding: .8em;
+	max-height: 600px;
+	max-width: 800px;
+	box-sizing: border-box;
+	background-color: #e6e6e6;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nd-canvas-ltr .nd-content-box {
+	padding: 1em 2em 1em 1em; 
+}
+
+.nd-canvas-rtl .nd-content-box {
+	padding: 1em 1em 1em 2em; 
+}
+
+.nd-canvas-ttb .nd-content-box {
+	padding: 1em 1em 2em 1em; 
+} 
+
+.nd-canvas-btt .nd-content-box {
+	padding: 2em 1em 1em 1em; 
+}
+
+.nd-node-active>.nd-content-box {
+	background-color: #ffffff;
+}
+
+.nd-canvas-inspect .nd-branch-focal .nd-node-active>.nd-content-box {
+	cursor: auto;
+}
+
+.nd-node-leave-active {
+	overflow: hidden;
+	z-index: -1;
+}
+
+.nd-canvas-ltr .nd-node-leave-active, .nd-canvas-rtl .nd-node-leave-active {
+	width: 100%;
+}
+
+.nd-canvas-btt .nd-node-leave-active, .nd-canvas-ttb .nd-node-leave-active {
+	height: 100%;
+}
+
+.nd-node-enter-from, .nd-node-leave-active {
+	opacity: 0;
+}
+
+.nd-node-enter-active, .nd-node-leave-active {
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nd-node-move {
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nd-child-indicator {
+	position: absolute;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #acacac;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.nd-canvas-ltr .nd-child-indicator {
+	right: 1em;
+	top: 50%;
+    transform: translateY(-50%);
+    border-width: 0 .2em 0 0;
+}
+
+.nd-canvas-rtl .nd-child-indicator {
+	left: 1em;
+	top: 50%;
+    transform: translateY(-50%);
+    border-width: 0 0 0 .2em;
+}
+
+.nd-canvas-ttb .nd-child-indicator {
+	bottom: 1em;
+	left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 0 .2em 0;
+}
+
+.nd-canvas-btt .nd-child-indicator {
+	top: 1em;
+	left: 50%;
+    transform: translateX(-50%);
+    border-width: .2em 0 0 0;
+}
+
+.nd-child-indicator-expanded {
+    width: 1em;
+    height: 1em;
+    transform-origin: center;
+}
+
+.nd-canvas-ltr .nd-child-indicator-expanded {
+    transform: translateY(-50%) rotate(45deg);
+    border-width: .2em .2em 0 0;
+}
+
+.nd-canvas-rtl .nd-child-indicator-expanded {
+    transform: translateY(-50%) rotate(45deg);
+    border-width: 0 0 .2em .2em;
+}
+
+.nd-canvas-ttb .nd-child-indicator-expanded {
+    transform: translateX(-50%) rotate(45deg);
+    border-width: 0 .2em .2em 0;
+}
+
+.nd-canvas-btt .nd-child-indicator-expanded {
+    transform: translateX(-50%) rotate(45deg);
+    border-width: .2em 0 0 .2em;
+}
+
+.nd-child-indicator-enter-from, .nd-child-indicator-leave-active {
+	opacity: 0;
+}
+
+.nd-child-indicator-enter-active, .nd-child-indicator-leave-active {
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}

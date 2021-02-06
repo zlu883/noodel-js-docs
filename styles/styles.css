@@ -94,62 +94,10 @@ code[class*="language-"] {
     font-size: .7em;
 }
 
-.nd-canvas {
-    outline: none;
-    background-color: #deab6a;
-    width: 100vw;
-    height: 100vh;
-}
-
-.nd-node, .nd-child-indicator {
-    background-color: #ffedd9;
-}
-
-.nd-node {
-    border-radius: .7em;
-    position: relative;
-}
-
-.nd-node-active, .nd-child-indicator-active {
-    background-color: white;
-}
-
-.nd-branch-inner {
-    opacity: 0.8;
-    transition-property: opacity;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-}
-
-.nd-branch-inner-focal {
-    opacity: 1;
-}
-
 .landing-node {
     text-align: center;
     padding: 2em;
     font-size: 18px;
-}
-
-.nd-node > *:first-child {
-    margin-top: .2em;
-}
-
-.nd-node > *:last-child {
-    margin-bottom: .2em;
-}
-
-.nd-limit {
-    background-color: #a67a4b;
-    transform: scale(2);
-}
-
-.nd-limit-enter, .nd-limit-leave-to {
-    transform: scale(1);
-}
-
-.nd-limit-enter-active, .nd-limit-leave-active {
-    transition-property: opacity, transform;
 }
 
 .copyright {
