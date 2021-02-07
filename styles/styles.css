@@ -16,6 +16,22 @@ button:disabled {
     cursor: initial !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
 a {
     text-decoration: none;
 }
@@ -50,6 +66,14 @@ code[class*="language-"] {
     text-align: center;
 }
 
+.subtitle {
+    font-size: 1.2em;
+    color: #595959;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
 .version {
     margin: auto;
     text-align: center;
@@ -71,13 +95,13 @@ code[class*="language-"] {
 
 .link {
     display: flex;
-    background: #f2f2f2;
+    background: #727272;
     padding: .5em 1em;
     border-radius: 1em;
     margin: .2em .3em 0 .3em;
     align-items: center;
     cursor: pointer;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -96,13 +120,14 @@ code[class*="language-"] {
 
 .landing-node {
     text-align: center;
-    padding: 2em;
+    padding: 2em !important;
     font-size: 18px;
 }
 
 .copyright {
     text-align: center;
     color: #444444;
+    padding: 1em !important;
 }
 
 @media (max-width: 800px) {

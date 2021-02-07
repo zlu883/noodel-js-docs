@@ -10,15 +10,13 @@
     <script src="./scripts/noodel.umd.min.js"></script>
     <script src="./scripts/noodel-search.umd.min.js"></script>
     <script src="./scripts/prism.min.js"></script>
-    <script src="./scripts/prism-typescript.min.js"></script>
-    <script src="./scripts/prism-normalize-whitespace.min.js"></script>
     <script src="./scripts/index.js"></script>
 
     <link rel="icon" href="./assets/logo_v8_textless_512x512.svg">
 
     <link rel="stylesheet" href="./styles/noodel.min.css">
     <link rel="stylesheet" href="./styles/noodel-default.css">
-    <link rel="stylesheet" href="./styles/prism.min.css">
+    <link rel="stylesheet" href="./styles/prism.css">
     <link rel="stylesheet" href="./styles/styles.css">
 
     <title>Noodel.js</title>
@@ -50,28 +48,26 @@
         <img src="search.svg">
     </button>
     <div id="noodel">
-        <div class="node" data-class="landing-node">
+        <div class="node" data-class-content-box="landing-node">
+            <span class="version">v3.0.0</span>
             <img src="./assets/logo_v8_textless_512x512.svg" class="logo" />
             <h1 class="title">Noodel.js</h1>
-            <h2 class="subtitle">Beautiful, intuitive UI system for modern web content</h2>
-            <span class="version">v3.0.0</span>
+            <h2 class="subtitle">Beautiful, dynamic UI system for modern web content</h2>
             <div class="link-container">
-                <a class="link" href="https://github.com/zlu883/noodel-js" target="_blank"><img src="./github.svg"
-                        class="link-icon"> GitHub</a>
-                <a class="link" href="https://codepen.io/collection/DopkMm" target="_blank"><img src="./codepen.svg"
-                        class="link-icon"> Examples</a>
+                <a class="link" href="https://codepen.io/collection/DopkMm" target="_blank"><img src="assets/codepen.svg" class="link-icon"> Demo</a>
+                <a class="link" href="https://github.com/zlu883/noodel-js" target="_blank"><img src="assets/github.svg" class="link-icon"> GitHub</a>
             </div>
             <div class="node" data-class="menu-item">
-                <h3>Basic controls</h3>
-                <p>
-                    - <b>Move ← ↑ → ↓ or tap on target</b> to navigate<br>
-                </p>
-                <p>
-                    - <b>Double tap</b> to view overflow content or select text<br>
-                </p>
+                <h2>❓ How this site works</h2>
                 <div class="node">
-                    <h3>All controls</h3>
-                    <h4>[Navigation]</h4>
+                    <h3>Basic controls</h3>
+                    <p>
+                        <b>- Move ← ↑ → ↓</b> or <b>tap on target</b> to navigate<br>
+                        <b>- Double tap</b> to view overflow content or select text
+                    </p>
+                </div>
+                <div class="node">
+                    <h3>All navigation controls</h3>
                     <p>
                         <b>[Mouse]</b>
                         <br>- Click & drag (← ↑ → ↓)
@@ -89,7 +85,9 @@
                         <br><b>[Mouse/Touch]</b>
                         <br>- Tap on target
                     </p>
-                    <h4>[Toggle inspect mode]</h4>
+                </div>
+                <div class="node">
+                    <h3>Toggle inspect mode</h3>
                     <p>(to view overflow content or select text)</p>
                     <p>
                         <b>[Mouse/Touch]</b>
@@ -98,126 +96,106 @@
                         <br>- Enter key
                     </p>
                 </div>
-            </div>
+            </div>   
             <div class="node" data-class="menu-item">
-                <h2>🌱 Overview</h2>
+                <h2>📖 Overview</h2>
                 <div class="node">
-                    <h3>About Noodel</h3>
-                    <div class="node">
-                        <p>
-                            Noodel - which stands for <i>node view model</i> - is a responsive, dynamic user interface for
-                            content trees, which you can navigate by simply moving up, down, left and right.
-                            It offers a new way to present content that is modern, intuitive, and adaptable.
-                        </p>
-                        <p>
-                            Noodel is currently available as Noodel.js, an open source JavaScript library for use in web
-                            projects.
-                        </p>
-                    </div>
+                    <h4>About Noodel</h4>
+                    <p>
+                        Noodel - which stands for <i>node view model</i> - is a beautiful, dynamic user interface for
+                        digital content. It offers a way to present content that is modern, intuitive, and adaptable.
+                    </p>
+                    <p>
+                        Noodel is currently available as Noodel.js, an open source JavaScript library for use in web-based
+                        projects.
+                    </p>
                 </div>
                 <div class="node">
-                    <h3>What can I use it for?</h3>
-                    <div class="node">
-                        <p>
-                            At the maximum, you can use Noodel to present a full website or app as an interactive
-                            content tree. It can be used for virtually anything - from static blogs or wikis, to dynamic
-                            apps with complex control flow.
-                        </p>
-                        <p>
-                            At the minimum, you can use Noodel like a carousel component that can be plugged into an
-                            existing page - for multi-level slideshows or hierachical information.
-                        </p>
-                    </div>
+                    <h4>How it works</h4>
+                    <p>
+                        Noodel requires you to arrange your content into a tree of nodes, where each node contains a
+                        distinct chunk of content.
+                    </p>
+                    <p>
+                        Your content tree will be presented on an infinite canvas that you can navigate by simply
+                        moving up, down, left and right.
+                    </p>
+                    <p>
+                        Blocks of content will show or hide as you move through the tree, keeping only the relevant
+                        subtree visible. Think of it like an infinite cascade of drop-down menus - but much more elegant and useful.
+                    </p>
                 </div>
                 <div class="node">
-                    <h3>How it works</h3>
-                    <div class="node">
-                        <p>
-                            Noodel requires you to arrange your content into a tree of nodes, where each node contains a
-                            distinct chunk of content.
-                        </p>
-                        <p>
-                            Your content tree will be presented on an infinite canvas that you can navigate by simply
-                            moving up, down, left and right.
-                        </p>
-                        <p>
-                            Blocks of content will show or hide as you move through the tree, keeping only the relevant
-                            subtree visible.
-                        </p>
-                        <p>
-                            Think of it like an infinite cascade of drop-down menus - but much more elegant and useful.
-                        </p>
-                    </div>
+                    <h4>Why Noodel?</h4>
+                    <p>
+                        As websites and applications grow larger and more complicated, so too will UI features provided for
+                        navigation - like table of contents, menus and sidebars. However, these components add clutter
+                        to the UI, and are generally hard to use on small screens and touch devices.
+                    </p>
+                    <p>
+                        Noodel is a system designed from the ground up that aims to present content in a <i>better</i>
+                        way. Originally intended as an idea for navigating tree hierarchies, it has evolved to become
+                        an incredibly versatile system for displaying content in general. Inspired by the "right = enter, left = exit"
+                        paradigm of UI design, as well as 4-way swipe motions that are increasingly utilised by mobile apps,
+                        Noodel allows you to integrate navigation with the content organically without requiring any extra UI components.
+                    </p>
                 </div>
                 <div class="node">
-                    <h3>Why Noodel?</h3>
-                    <div class="node">
-                        <p>
-                            Much of the content we encounter everyday naturally come in tree structures.
-                            Trees, however, are difficult to present on a viewing surface. Conventional
-                            UI schemes tend to "flatten" trees into linear layouts - the most common offender being
-                            long texts with many sections and subsections squashed into a single vertical column.
-                            Trying to find the section you want can be an exercise.
-                        </p>
-                        <p>
-                            Usually, this problem is addressed by table of contents and navigation menus. But
-                            such components become hard to use on smaller screens and does not
-                            scale well.
-                        </p>
-                        <p>
-                            Noodel is a system designed from the ground up that aims to present content in a <i>better</i>
-                            way - by integrating navigation with the content itself. As a design-driven and UI-driven
-                            concept, its core intent is to make the user experience as great as possible.
-                        </p>
-                    </div>    
-                </div>
+                    <h4>What can I use it for?</h4>
+                    <p>
+                        At the maximum, you can use Noodel to present a full website or app as an interactive
+                        content tree. It can be used for virtually anything - from static blogs or wikis, to dynamic
+                        apps with complex control flow.
+                    </p>
+                    <p>
+                        At the minimum, you can use Noodel as a versatile UI plugin for responsive slideshows or hierachical data.
+                    </p>
+                </div>             
                 <div class="node">
-                    <h3>What's so good about it?</h3>
+                    <h4>What's so good about it?</h4>
                     <div class="node">
-                        <h4>😃 Intuitive</h4>
+                        <h5>😃 Intuitive</h5>
                         <p>
                             Noodel is simple and intuitive. Most people immediately understand how it works. It
-                            aims to leverage the user's spatial memory for navigation, and reduce clutter and cognitive
+                            aims to leverage the user's spatial memory for navigation, and reduce screen clutter and cognitive
                             load.
                         </p>
                     </div>
                     <div class="node">
-                        <h4>📱 Device agnostic</h4>
+                        <h5>📱 Device agnostic</h5>
                         <p>
-                            Noodel's display and navigation mechanism remains identical,
+                            Noodel's display and navigation mechanism remains identical
                             regardless of screen size and input method. By reducing the essential controls to 4-way
-                            movements,
-                            it can be easily adapted to contexts where control ability is limited.
+                            movements, it can be easily used in contexts where control ability is limited.
                         </p>
                     </div>
                     <div class="node">
-                        <h4>💪 Flexible</h4>
+                        <h5>💪 Flexible</h5>
                         <p>
                             Everything about Noodel is designed to be flexible - from its fully customizable styles
-                            to what kind of content you can put in. Nodes can even grow or shrink on-the-fly!
+                            and layout, to what kind of content you can put in.
                         </p>
                     </div>
                     <div class="node">
-                        <h4>🚀 Dynamic</h4>
+                        <h5>🚀 Dynamic</h5>
                         <p>
                             Noodel is more than just a static content viewer, although you can certainly use it that
-                            way.
-                            Noodel provides an extensive API with navigation methods and getters, and allows you to
+                            way. Noodel provides an extensive API with navigation methods and getters, and allows you to
                             insert, update or delete nodes at any time.
                         </p>
                     </div>
                     <div class="node">
-                        <h4>⚡ Performant</h4>
+                        <h5>⚡ Performant</h5>
                         <p>
                             Noodel is built with performance in mind using modern best practices. It uses the
-                            fast and powerful <a target="_blank" href="https://vuejs.org/">Vue.js</a> library
+                            powerful <a target="_blank" href="https://vuejs.org/">Vue.js</a> library
                             under the hood for DOM management and updates.
                         </p>
                     </div>
                     <div class="node">
-                        <h4>✨ Interactive</h4>
+                        <h5>✨ Interactive</h5>
                         <p>
-                            And finally, who doesn't like an interface that feels like it came from a sci-fi movie?
+                            And finally, who doesn't like an interface that feels like it's from a sci-fi movie?
                             Noodel is responsive, interactive and comes with fancy animation effects. It's
                             just cool.
                         </p>
@@ -225,16 +203,15 @@
                 </div>
             </div>
             <div class="node" data-class="menu-item">
-                <h2>🌱 Concepts</h2>
+                <h2>📖 Concepts</h2>
                 <div class="node">
-                    <h3>Node</h3>
+                    <h5>Node</h5>
                     <p>
-                        The container for a block of content in Noodel is called a <i>node</i> - just like the one
-                        you're
-                        looking at right now. Nodes are the basic building blocks for your content tree.
+                        The container for a unit of content in Noodel is called a <i>node</i> - just like the one
+                        you're looking at right now. Nodes are the basic building blocks for your content.
                     </p>
                     <p>
-                        Each node contains a unit of content. It can also have one or more ordered child nodes
+                        Each node can have one or more ordered child nodes
                         that have their own units of sub-content. This can repeat infinitely to form a tree of any size.
                     </p>
                     <div class="node">
@@ -249,89 +226,85 @@
                     </div>
                 </div>
                 <div class="node">
-                    <h3>Noodel</h3>
+                    <h5>Noodel</h5>
                     <p>
                         A <i>noodel</i> (i.e. node view model) refers to the whole content tree formed by nodes.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Active child node</h3>
+                    <h5>Active child node</h5>
                     <p>
                         If a node has children, it must have exactly 1 child that's <i>active</i>.
                         The descendants of the active child will be shown while the others hidden.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Active tree</h3>
+                    <h5>Active tree</h5>
                     <p>
-                        This means that, at any given time, only the children of nodes on the lineage
+                        At any given time, only the children of nodes on the lineage
                         of active nodes starting from the root are shown. This tree of visible
                         content is called the <i>active tree</i>.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Branch</h3>
+                    <h5>Branch</h5>
                     <p>
                         The container (slider) for a list of sibling nodes is called a <i>branch</i>.
                     </p>
                     <div class="node">
                         <p>
                             In other words, a branch refers to a node's list of children.
-                            Each branch is always associated with a node - the parent node of the branch.
+                            Each branch is always uniquely associated with a node - the parent node of the branch.
                         </p>
                     </div>
                 </div>
                 <div class="node">
-                    <h3>Branch axis</h3>
+                    <h5>Branch axis</h5>
                     <p>
                         The axis on which nodes are ordered in branches is called the <i>branch axis</i>.
                         It is vertical (top to bottom) by default.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Trunk</h3>
+                    <h5>Trunk</h5>
                     <p>
-                        The container (slider) for the list of branches in the active tree, ordered from ancestor
+                        The container (slider) for the list of branches in the active tree, ordered from ancestors
                         to descendants, is called the <i>trunk</i>.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Trunk axis</h3>
+                    <h5>Trunk axis</h5>
                     <p>
                         The axis on which branches are ordered in the trunk is called the <i>trunk axis</i>.
                         It is horizontal (left to right) by default.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Root node</h3>
+                    <h5>Root node</h5>
                     <p>
                         The root node is an invisible node that serves as the parent of the topmost branch
                         (i.e. the root of the tree), and always exists.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Level</h3>
+                    <h5>Level</h5>
                     <p>
                         The level refers to the depth of a node (or branch) in the tree. The root node has level 0,
                         its children (and branch) has level 1, and so on.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Focal branch</h3>
+                    <h5>Focal branch</h5>
                     <p>
                         The branch that the view is currently focusing on is the <i>focal branch</i>.
-                    </p>
-                    <p>
-                        Moving in the trunk axis (by default, moving left and right) changes the focal branch.
+                        Moving in the trunk axis changes the focal branch.
                     </p>
                 </div>
                 <div class="node">
-                    <h3>Focal node</h3>
+                    <h5>Focal node</h5>
                     <p>
                         The active node inside the focal branch is the <i>focal node</i>.
-                    </p>
-                    <p>
-                        Moving in the branch axis (by default, moving up and down) changes the active node of the focal
+                        Moving in the branch axis changes the active node of the focal
                         branch.
                     </p>
                     <p>
@@ -340,11 +313,11 @@
                 </div>
             </div>
             <div class="node" data-class="menu-item">
-                <h2>🌱 Guide</h2>
+                <h2>📖 Guide</h2>
                 <div class="node">
                     <h3>Installation</h3>
                     <div class="node">
-                        <h3>Direct <code class="language-html">&lt;script&gt;</code> embed</h3>
+                        <h4>Direct script embed</h4>
                         <p>You can use Noodel by directly embedding its script and CSS into your HTML:</p>
                         <pre>
                             <code class="language-html">
@@ -358,13 +331,13 @@
                             Noodel can be obtained via npm-linked CDNs such as <a
                                 href="https://www.jsdelivr.com/">jsdelivr</a> and <a
                                 href="https://unpkg.com/">unpkg</a>.
-                            It is bundled as a UMD package and available in minimized (prod) and non-minimized (dev)
+                            It is bundled as a UMD package and available in minimized (production) and non-minimized (development)
                             versions.
                         </p>
                         <div class="node" data-id="vueless-build">
-                            <h3>Vue-less build</h3>
+                            <h5>Vue-less build</h5>
                             <p>
-                                There is a separate build of Noodel called noodel-no-vue.umd.js. This version comes
+                                There is a separate build of Noodel called <code class="language-html">noodel-no-vue.umd.js</code>. This version comes
                                 without Vue.js bundled and is intended to be used in Vue projects where the Vue
                                 script is included separately, to prevent including Vue twice. See <a
                                     href="#usage-vue-summary">Usage with Vue</a> for more details.
@@ -372,7 +345,7 @@
                         </div>
                     </div>
                     <div class="node">
-                        <h3>npm</h3>
+                        <h4>npm</h4>
                         <p>For more complex projects that use bundlers, install from npm:</p>
                         <pre>
                         <code class="language-shell">
@@ -389,16 +362,19 @@
                         </pre>
                     </div>
                     <div class="node">
-                        <h3>Stylesheets</h3>
+                        <h4>Stylesheets</h4>
                         <p>
-                            Noodel comes with two stylesheets by default, noodel.css and noodel-default.css.
-                            The first stylesheet is a "core" stylesheet that contains the critical styles for
-                            Noodel's functioning and needs to be included in all scenarios.
+                            Noodel comes with a "core" stylesheet, <code class="language-html">noodel.css</code>, 
+                            and a theming stylesheet, <code class="language-html">noodel-default.css</code>.
                         </p>
                         <p>
-                            The second stylesheet is a theming stylesheet that provides a default grayscale theme
-                            and basic CSS transitions for Noodel's visual effects. You can include this stylesheet
-                            and add style overrides for customization, or replace it altogether with your
+                            The core stylesheet contains styles critical for
+                            Noodel's functioning and needs to be included in all cases.
+                        </p>
+                        <p>
+                            The theming stylesheet provides a default grayscale theme
+                            with basic transitions for Noodel's visual effects. You can include this stylesheet
+                            and tweak it for customization, or replace it altogether with your
                             own custom theme. See <a href="#styling-summary">Styling</a> for more details.
                         </p>
                     </div>
@@ -406,8 +382,8 @@
                 <div class="node">
                     <h3>Basic usage</h3>
                     <div class="node">
-                        <h3>Creating a noodel</h3>
-                        <p>Creating a noodel is very straightforward. The basic syntax is:</p>
+                        <h4>Creating a noodel</h4>
+                        <p>Creating a noodel is simple. The basic operations are:</p>
                         <pre>
                             <code class="language-js">
                                 // Creates a view model based on the given content tree
@@ -421,17 +397,10 @@
                             The <i>contentTree</i> is an element selector or array of objects that specifies
                             the content tree, and <i>container</i> is the target container element for placing the noodel.
                         </p>
-                        <div class="node">
-                            <p>
-                                Mounting will render Noodel's element tree <i>into</i> the container element
-                                as a child.
-                            </p>
-                        </div>
                     </div>
                     <div class="node">
-                        <h3>Defining content tree via HTML</h3>
+                        <h4>Defining content tree via HTML</h4>
                         <p>
-                            There are two ways to define the content tree that will be used by a noodel.
                             For sites driven by static HTML templates, you can define the tree via HTML and
                             give the root element to the constructor:
                         </p>
@@ -458,12 +427,12 @@
                         </code>
                     </pre>
                         <div class="node">
-                            <h3>The specifics</h3>
+                            <h5>The specifics</h5>
                             <p>
                                 Noodel will traverse the descendants of the container element and convert
                                 all <code class="language-html">&lt;div&gt;</code>s with
                                 <code class="language-html">class="node"</code> into
-                                noodel nodes, keeping the parent-child relationships. Any text or
+                                Noodel's nodes, keeping the parent-child relationships. Any text or
                                 elements inside a node that are not child nodes will be treated as the
                                 <i>content</i> of that node, concatenated in the order they appear.
                             </p>
@@ -474,12 +443,12 @@
                             </p>
                             <p>
                                 Note that the actual DOM nodes in the definition will not be placed into Noodel's element tree. 
-                                This means that side effects such as event listeners attached to the nodes will not be carried over.
+                                This means that side effects such as event listeners attached to them will not be carried over.
                             </p>
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Defining content tree via object array</h3>
+                        <h4>Defining content tree via object array</h4>
                         <p>
                             Alternatively, for dynamic sites/apps driven by JavaScript, you can specify
                             the content tree as an array of objects corresponding to nodes on the first level:
@@ -506,7 +475,7 @@
                     </pre>
                         <div class="node">
                             <p>
-                                <img src="./alert-triangle.svg" class="link-icon" /> Always use trusted HTML strings as
+                                <span style="font-size: 1.5em;">⚠️</span> Always use trusted HTML strings as
                                 content. Never use unsanitized strings from user input.
                             </p>
                         </div>
@@ -515,12 +484,11 @@
                 <div class="node">
                     <h3>Configuring your noodel</h3>
                     <div class="node">
-                        <h3>Specifying options</h3>
+                        <h4>Specifying options</h4>
                         <pre>
                             <code class="language-js">
                                 // setting options for individual nodes
                                 const nodeDefinition = {
-                                    content: "node with options",
                                     options: {
                                         showChildIndicator: false,
                                         focalAnchorTrunk: (size) => size / 3
@@ -528,7 +496,7 @@
                                 }
 
                                 // setting global options for the noodel
-                                const noodel = new Noodel([node], {
+                                const noodel = new Noodel([nodeDefinition], {
                                     visibleSubtreeDepth: 5,
                                     focalAnchorTrunk: (size) => size / 4
                                 });
@@ -536,14 +504,14 @@
                         </pre>
                         <div class="node">
                             <p>
-                                Setting options on individual nodes can only be done via
+                                Setting options can only be done via
                                 JavaScript. If your noodel is defined by an HTML template you still need to
-                                set your individual node options programmatically.
+                                set your noodel and node options programmatically.
                             </p>
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Specifying node ID</h3>
+                        <h4>Specifying node ID</h4>
                         <p>
                             By default, a unique ID will be generated for each node, which will
                             be used for various purposes. You can provide your own ID for nodes using a data attribute:
@@ -560,19 +528,18 @@
                             <code class="language-js">
                                 const nodeDefinition = {
                                     id: "myCustomId",
-                                    content: "node with custom ID"
                                 }
                             </code>
                         </pre>
                         <div class="node">
                             <p>
-                                Your custom ID must be unique and should NOT start with "_" as it may conflict
+                                Your custom ID must be unique and should not start with "_" as it may conflict
                                 with Noodel's default IDs.
                             </p>
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Specifying initial active child</h3>
+                        <h4>Specifying initial active child</h4>
                         <p>
                             By default, the initial active child for each node is at index 0 (the first child).
                             You can specify another child to be initially active by using:
@@ -587,7 +554,7 @@
                         <p>or in JavaScript:</p>
                         <pre>
                             <code class="language-js">
-                                const contentTree = [
+                                const nodeDefinitions = [
                                     {
                                         content: "First child"
                                     },
@@ -600,9 +567,9 @@
                         </pre>
                     </div>
                     <div class="node" data-id="configure-custom-style">
-                        <h3>Specifying custom class/styles</h3>
+                        <h4>Specifying custom CSS classes/styles</h4>
                         <p>
-                            You can specify custom class/styles on the various DOM elements associated with each node.
+                            You can assign custom CSS classes/styles to the various DOM elements associated with each node.
                             See the API for the list of different elements you can style.
                         </p>
                         <pre>
@@ -613,7 +580,7 @@
                                     data-class-content-box="myClassC"
                                     data-style-content-box="color: green; max-width: 900px;"
                                 &gt;
-                                    A stylish node
+                                    ...
                                 &lt;/div&gt;
                             </code>
                         </pre>
@@ -627,20 +594,19 @@
                                     },
                                     style: {
                                         contentBox: "color: green; max-width: 900px;"
-                                    },
-                                    content: "A stylish node"
+                                    }
                                 }
                             </code>
                         </pre>
                     </div>
                     <div class="node">
-                        <h3>Specifying branch content</h3>
+                        <h4>Specifying branch content</h4>
                         <p>
                             You can optionally define content that will be associated with a node's
                             child branch rather than individual nodes. This branch content will only
-                            be displayed if the node has at least 1 child.
+                            be displayed if the node has a branch (i.e. has at least 1 child).
                         </p>
-                        <p>For HTML templates this is specified via a node with the class "branch-content":</p>
+                        <p>For HTML templates this is specified via a div with the class "branch-content":</p>
                         <pre>
                             <code class="language-html">
                                 &lt;div class="node" &gt;
@@ -662,16 +628,16 @@
                         </pre>
                     </div>
                     <div class="node">
-                        <h3>Listening to events</h3>
+                        <h4>Listening to events</h4>
                         <p>
                             You can attach one or more event listeners for each event on both the noodel
                             and its individual nodes. See the API for the list of events available.
                         </p>
                         <pre>
                             <code class="language-js">
-                                const noodel = new Noodel([);
+                                const noodel = new Noodel([]);
                                 const onFocalNodeChange = () => console.log("focal node has changed");
-                                const anotherListener = () => console.log("another");
+                                const anotherListener = () => console.log("another listener triggered");
                                 
                                 noodel.on("focalNodeChange", onFocalNodeChange); // attach listener
                                 noodel.on("focalNodeChange", anotherListener); // attach another listener
@@ -1319,7 +1285,7 @@
                 </div>
             </div>
             <div class="node" data-class="menu-item">
-                <h2>🌱 API</h2>
+                <h2>📖 API</h2>
                 <div class="node" data-class="menu-item">
                     <h3>Noodel<span class="label">class</span></h3>
                     <p>The view model of a noodel. Has 2-way binding with the view.</p>
@@ -2356,7 +2322,7 @@
                 </div>
             </div>
             <div class="node" data-class="menu-item">
-                <h2>🤝 Contribute</h2>
+                <h2>💡 Contribute</h2>
                 <div class="node">
                     <p>Contributions are most welcome! Please <b><a
                                 href="https://github.com/zlu883/noodel-js/blob/master/CONTRIBUTING.md">see here</a></b>
@@ -2366,7 +2332,7 @@
             <div class="node" data-class="menu-item">
                 <h2>❤️ Donate</h2>
                 <div class="node">
-                    <p>If you find Noodel useful or inspiring, please consider supporting the author :)</p>
+                    <p>If you find Noodel useful or inspiring, please consider supporting the author 🙂</p>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick" />
                         <input type="hidden" name="hosted_button_id" value="5YLHMEDSS3A6W" />
@@ -2376,14 +2342,14 @@
                         <img alt="" border="0" src="https://www.paypal.com/en_NZ/i/scr/pixel.gif" width="1"
                             height="1" />
                     </form>
-                    <p>Or via <b><a href="https://github.com/sponsors/zlu883">Github Sponsors</a></b></p>
+                    <p>Or via <b><a href="https://github.com/sponsors/zlu883">GitHub Sponsors</a></b></p>
                 </div>
             </div>
         </div>
-        <div class="node">
-            <p class="copyright">
+        <div class="node" data-class-content-box="copyright">
+            <p>
                 MIT License<br>
-                © 2019-2020 Zuohao (Jonny) Lu
+                © 2019-present Zuohao (Jonny) Lu
             </p>
         </div>
     </div>
