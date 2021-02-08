@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="./styles/noodel.min.css">
     <link rel="stylesheet" href="./styles/noodel-default.css">
-    <link rel="stylesheet" href="./styles/prism.css">
+    <link rel="stylesheet" href="./styles/prism-default.css">
     <link rel="stylesheet" href="./styles/styles.css">
 
     <title>Noodel.js</title>
@@ -54,8 +54,10 @@
             <h1 class="title">Noodel.js</h1>
             <h2 class="subtitle">Beautiful, dynamic UI system for modern web content</h2>
             <div class="link-container">
-                <a class="link" href="https://codepen.io/collection/DopkMm" target="_blank"><img src="assets/codepen.svg" class="link-icon"> Demo</a>
-                <a class="link" href="https://github.com/zlu883/noodel-js" target="_blank"><img src="assets/github.svg" class="link-icon"> GitHub</a>
+                <a class="link" href="https://codepen.io/collection/DopkMm" target="_blank"><img
+                        src="assets/codepen.svg" class="link-icon"> Demo</a>
+                <a class="link" href="https://github.com/zlu883/noodel-js" target="_blank"><img src="assets/github.svg"
+                        class="link-icon"> GitHub</a>
             </div>
             <div class="node" data-class="menu-item">
                 <h2>❓ How this site works</h2>
@@ -96,7 +98,7 @@
                         <br>- Enter key
                     </p>
                 </div>
-            </div>   
+            </div>
             <div class="node" data-class="menu-item">
                 <h2>📖 Overview</h2>
                 <div class="node">
@@ -106,7 +108,8 @@
                         digital content. It offers a way to present content that is modern, intuitive, and adaptable.
                     </p>
                     <p>
-                        Noodel is currently available as Noodel.js, an open source JavaScript library for use in web-based
+                        Noodel is currently available as Noodel.js, an open source JavaScript library for use in
+                        web-based
                         projects.
                     </p>
                 </div>
@@ -122,22 +125,27 @@
                     </p>
                     <p>
                         Blocks of content will show or hide as you move through the tree, keeping only the relevant
-                        subtree visible. Think of it like an infinite cascade of drop-down menus - but much more elegant and useful.
+                        subtree visible. Think of it like an infinite cascade of drop-down menus - but much more elegant
+                        and useful.
                     </p>
                 </div>
                 <div class="node">
                     <h4>Why Noodel?</h4>
                     <p>
-                        As websites and applications grow larger and more complicated, so too will UI features provided for
+                        As websites and applications grow larger and more complicated, so too will UI features provided
+                        for
                         navigation - like table of contents, menus and sidebars. However, these components add clutter
                         to the UI, and are generally hard to use on small screens and touch devices.
                     </p>
                     <p>
                         Noodel is a system designed from the ground up that aims to present content in a <i>better</i>
                         way. Originally intended as an idea for navigating tree hierarchies, it has evolved to become
-                        an incredibly versatile system for displaying content in general. Inspired by the "right = enter, left = exit"
-                        paradigm of UI design, as well as 4-way swipe motions that are increasingly utilised by mobile apps,
-                        Noodel allows you to integrate navigation with the content organically without requiring any extra UI components.
+                        an incredibly versatile system for displaying content in general. Inspired by the "right =
+                        enter, left = exit"
+                        paradigm of UI design, as well as 4-way swipe motions that are increasingly utilised by mobile
+                        apps,
+                        Noodel allows you to integrate navigation with the content organically without requiring any
+                        extra UI components.
                     </p>
                 </div>
                 <div class="node">
@@ -148,23 +156,25 @@
                         apps with complex control flow.
                     </p>
                     <p>
-                        At the minimum, you can use Noodel as a versatile UI plugin for responsive slideshows or hierachical data.
+                        At the minimum, you can use Noodel as a versatile UI plugin for responsive slideshows or
+                        hierachical data.
                     </p>
-                </div>             
+                </div>
                 <div class="node">
                     <h4>What's so good about it?</h4>
                     <div class="node">
                         <h5>😃 Intuitive</h5>
                         <p>
                             Noodel is simple and intuitive. Most people immediately understand how it works. It
-                            aims to leverage the user's spatial memory for navigation, and reduce screen clutter and cognitive
+                            aims to leverage the user's spatial memory for navigation, and reduce screen clutter and
+                            cognitive
                             load.
                         </p>
                     </div>
                     <div class="node">
                         <h5>📱 Device agnostic</h5>
                         <p>
-                            Noodel's display and navigation mechanism remains identical
+                            Noodel's layout and navigation mechanism remains identical
                             regardless of screen size and input method. By reducing the essential controls to 4-way
                             movements, it can be easily used in contexts where control ability is limited.
                         </p>
@@ -180,7 +190,7 @@
                         <h5>🚀 Dynamic</h5>
                         <p>
                             Noodel is more than just a static content viewer, although you can certainly use it that
-                            way. Noodel provides an extensive API with navigation methods and getters, and allows you to
+                            way. It provides an extensive API with navigation methods and getters, and allows you to
                             insert, update or delete nodes at any time.
                         </p>
                     </div>
@@ -195,7 +205,8 @@
                     <div class="node">
                         <h5>✨ Interactive</h5>
                         <p>
-                            And finally, who doesn't like an interface that feels like it's from a sci-fi movie?
+                            And finally, who doesn't like an interface that feels like it walked out from a sci-fi
+                            movie?
                             Noodel is responsive, interactive and comes with fancy animation effects. It's
                             just cool.
                         </p>
@@ -331,13 +342,15 @@
                             Noodel can be obtained via npm-linked CDNs such as <a
                                 href="https://www.jsdelivr.com/">jsdelivr</a> and <a
                                 href="https://unpkg.com/">unpkg</a>.
-                            It is bundled as a UMD package and available in minimized (production) and non-minimized (development)
+                            It is bundled as a UMD package and available in minimized (production) and non-minimized
+                            (development)
                             versions.
                         </p>
                         <div class="node" data-id="vueless-build">
                             <h5>Vue-less build</h5>
                             <p>
-                                There is a separate build of Noodel called <code class="language-html">noodel-no-vue.umd.js</code>. This version comes
+                                There is a separate build of Noodel called <code
+                                    class="language-html">noodel-no-vue.umd.js</code>. This version comes
                                 without Vue.js bundled and is intended to be used in Vue projects where the Vue
                                 script is included separately, to prevent including Vue twice. See <a
                                     href="#usage-vue-summary">Usage with Vue</a> for more details.
@@ -364,7 +377,7 @@
                     <div class="node">
                         <h4>Stylesheets</h4>
                         <p>
-                            Noodel comes with a "core" stylesheet, <code class="language-html">noodel.css</code>, 
+                            Noodel comes with a "core" stylesheet, <code class="language-html">noodel.css</code>,
                             and a theming stylesheet, <code class="language-html">noodel-default.css</code>.
                         </p>
                         <p>
@@ -395,7 +408,8 @@
                         </pre>
                         <p>
                             The <i>contentTree</i> is an element selector or array of objects that specifies
-                            the content tree, and <i>container</i> is the target container element for placing the noodel.
+                            the content tree, and <i>container</i> is the target container element for placing the
+                            noodel.
                         </p>
                     </div>
                     <div class="node">
@@ -442,8 +456,10 @@
                                 of each node.
                             </p>
                             <p>
-                                Note that the actual DOM nodes in the definition will not be placed into Noodel's element tree. 
-                                This means that side effects such as event listeners attached to them will not be carried over.
+                                Note that the actual DOM nodes in the definition will not be placed into Noodel's
+                                element tree.
+                                This means that side effects such as event listeners attached to them will not be
+                                carried over.
                             </p>
                         </div>
                     </div>
@@ -569,7 +585,8 @@
                     <div class="node" data-id="configure-custom-style">
                         <h4>Specifying custom CSS classes/styles</h4>
                         <p>
-                            You can assign custom CSS classes/styles to the various DOM elements associated with each node.
+                            You can assign custom CSS classes/styles to the various DOM elements associated with each
+                            node.
                             See the API for the list of different elements you can style.
                         </p>
                         <pre>
@@ -691,10 +708,11 @@
                         <h3>Caveat</h3>
                         <p>
                             You should use prevention classes sparingly, on elements that really need them. Having large
-                            blocks of content with navigation prevention may impact usability, especially on smaller screens.
+                            blocks of content with navigation prevention may impact usability, especially on smaller
+                            screens.
                         </p>
                         <p>
-                            For situations that require extensive navigation prevention, you should rely on the 
+                            For situations that require extensive navigation prevention, you should rely on the
                             <a href="#inspect-mode-summary">inspect mode</a>
                             instead. Alternatively, you can disable the corresponding input in Noodel's options and
                             provide your own means of navigation via Noodel's API.
@@ -707,11 +725,12 @@
                         <h3>Summary</h3>
                         <p>
                             For swipe-based interfaces such as Noodel, there is always an unresolvable conflict between
-                            the swipe mechanism and native conveniences that depend on the same motion, such as text selection.
+                            the swipe mechanism and native conveniences that depend on the same motion, such as text
+                            selection.
                         </p>
                         <p>
                             The <i>inspect mode</i> is the solution Noodel offers to address this issue. By default,
-                            text selection is disabled on a noodel and all input directed towards navigation. 
+                            text selection is disabled on a noodel and all input directed towards navigation.
                             Once inspect mode is on, all navigation methods will
                             be suspended and the user is free to select text or perform other conflicting interactions
                             e.g. drag-and-drop in the focal node.
@@ -766,7 +785,7 @@
                             instance.
                         </p>
                         <p>
-                            These view models have 2-way sync with the view, and provide extensive API 
+                            These view models have 2-way sync with the view, and provide extensive API
                             methods for you to dynamically update almost every aspect of the content tree.
                         </p>
                         <pre>
@@ -829,7 +848,8 @@
                         </pre>
                         <div class="node">
                             <p>
-                                Note that updating content replaces the original content by replacing the innerHTML of the container.
+                                Note that updating content replaces the original content by replacing the innerHTML of
+                                the container.
                                 The original content elements will be removed.
                             </p>
                         </div>
@@ -878,7 +898,7 @@
                     <div class="node">
                         <h3>Changing state while not mounted</h3>
                         <p>
-                            The noodel's view state is independent of whether it's mounted or not. You can 
+                            The noodel's view state is independent of whether it's mounted or not. You can
                             mutate it while the noodel is not mounted and the change will persist.
                         </p>
                         <pre>
@@ -908,40 +928,47 @@
                         </p>
                         <p>
                             To use these options fully, you must understand the concepts of the branch axis and
-                            the trunk axis, which are used in place of the horizontal and vertical axes depending on the noodel's
-                            orientation. 
+                            the trunk axis, which are used in place of the horizontal and vertical axes depending on the
+                            noodel's
+                            orientation.
                         </p>
                     </div>
                     <div class="node">
                         <h3>Orientation and branch direction</h3>
                         <p>
                             The <code class="language-js">orientation</code> option specifies the direction of the
-                            <i>trunk axis</i>, and can be either ltr (default), rtl, ttb (top-to-bottom) and btt (bottom-to-top).
+                            <i>trunk axis</i>, and can be either ltr (default), rtl, ttb (top-to-bottom) and btt
+                            (bottom-to-top).
                         </p>
                         <p>
-                            The <code class="language-js">branch direction</code> option specifies how a branch layout its nodes,
+                            The <code class="language-js">branch direction</code> option specifies how a branch layout
+                            its nodes,
                             and can be either "normal" (default) or "reverse". When
                             the trunk axis is the horizontal axis (i.e. ltr or rtl), "normal" puts nodes from top to
-                            bottom, and "reverse" the opposite. When the trunk axis is the vertical axis, 
+                            bottom, and "reverse" the opposite. When the trunk axis is the vertical axis,
                             "normal" puts nodes from left to right, and "reverse" the opposite.
                         </p>
                     </div>
                     <div class="node">
                         <h3>Focal offsets and anchor offsets</h3>
                         <p>
-                            The focal offsets specify the "snap-to lines" on the canvas where the focal branch and active nodes
+                            The focal offsets specify the "snap-to lines" on the canvas where the focal branch and
+                            active nodes
                             align to, on their respective axis. These are calculated as a function of the canvas length,
                             and defaults to 1/2 of the canvas length (i.e. the center).
                         </p>
                         <p>
-                            The anchor offsets specify the "snap-to lines" on each branch/node that should be aligned to the
+                            The anchor offsets specify the "snap-to lines" on each branch/node that should be aligned to
+                            the
                             focal offset, on their respective axis, when they become focal or active.
                             These are calculated as a function of the length of the branch/node,
-                            and defaults to 1/2 of their length (i.e. the center). These can be specified globally and/or
+                            and defaults to 1/2 of their length (i.e. the center). These can be specified globally
+                            and/or
                             customized on each individual node.
                         </p>
                         <p>
-                            When used in combination, you can decide how and where the branches and nodes align in a highly flexible way.
+                            When used in combination, you can decide how and where the branches and nodes align in a
+                            highly flexible way.
                         </p>
                         <div class="node">
                             <p>
@@ -950,7 +977,7 @@
                         </div>
                         <div class="node">
                             <p>
-                                Also note that the "origins" referenced by these offsets are different 
+                                Also note that the "origins" referenced by these offsets are different
                                 depending on the orientation and branch direction. E.g. For an ltr layout
                                 with normal branch direction, the origin for the trunk axis is the left edge
                                 and the origin for the branch axis is the top edge. For an rtl layout
@@ -963,9 +990,11 @@
                         <h3>Resize management</h3>
                         <p>
                             Starting from Noodel v3, automatic resize detection has been removed in favor of
-                            a manual approach, to address some limitations and improve performance. If the noodel is mounted,
+                            a manual approach, to address some limitations and improve performance. If the noodel is
+                            mounted,
                             and something happens that causes the size of nodes/branches/canvas to change,
-                            you should immediately call one of Noodel's various <code class="language-js">realign()</code>
+                            you should immediately call one of Noodel's various <code
+                                class="language-js">realign()</code>
                             methods to capture the size change and reposition elements as necessary.
                         </p>
                         <pre>
@@ -985,9 +1014,11 @@
                         <div class="node">
                             <h3>Using realignAll()</h3>
                             <p>
-                                The realignAll() method is a convenience method for realigning everything at once. This is useful
-                                in situations such as when everything is styled based on viewport units, and the viewport size changed.
-                                Since this is a more expensive operation it should be used carefully. 
+                                The realignAll() method is a convenience method for realigning everything at once. This
+                                is useful
+                                in situations such as when everything is styled based on viewport units, and the
+                                viewport size changed.
+                                Since this is a more expensive operation it should be used carefully.
                             </p>
                             <pre>
                                 <code class="language-js">
@@ -1018,7 +1049,7 @@
                         <div class="node">
                             <p>
                                 If routing is enabled at a noodel's creation, it will check the URL to jump to
-                                an initial focal node if its ID is equal to the hash. The sync between the focal node 
+                                an initial focal node if its ID is equal to the hash. The sync between the focal node
                                 and the URL hash happens regardless whether the noodel is mounted.
                             </p>
                         </div>
@@ -1026,7 +1057,8 @@
                     <div class="node">
                         <h3>History push behavior</h3>
                         <p>
-                            Only explicit changes to the URL (e.g. by clicking on a link) will cause a new entry to be pushed to
+                            Only explicit changes to the URL (e.g. by clicking on a link) will cause a new entry to be
+                            pushed to
                             the browser history. Noodel uses
                             <a href=https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
                                 target="_blank">history.replaceState()</a>
@@ -1105,7 +1137,7 @@
                         <h3>Controlling node size</h3>
                         <p>
                             The size of nodes are completely flexible - they are simply placed in a
-                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flex</a> container, 
+                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flex</a> container,
                             and will grow or shrink to fit their content while respecting any CSS rules applied.
                         </p>
                         <p>
@@ -1170,11 +1202,11 @@
                         <p>
                             If you are including Noodel and Vue's scripts directly in your
                             HTML, it is recommended that you use Noodel's <a href="#note-on-builds">Vue-less
-                            build</a>, alongside the Vue script used in your main project (Noodel requires Vue V3).
+                                build</a>, alongside the Vue script used in your main project (Noodel requires Vue V3).
                             This prevents Vue from being included twice.
                         </p>
                         <p>
-                            If you are using Noodel via a bundler, the default entry is the Vue-less build 
+                            If you are using Noodel via a bundler, the default entry is the Vue-less build
                             and the bundler should be able to take care of bundling Vue as a dependency.
                         </p>
                         <div class="node">
@@ -1211,34 +1243,42 @@
                         </pre>
                         <div class="node">
                             <p>
-                                Noodel's Vue component takes a single prop, <i>noodel</i>, which must be the internal state tree
-                                of a Noodel instance that you can obtain via <code class="language-js">getState()</code>.
+                                Noodel's Vue component takes a single prop, <i>noodel</i>, which must be the internal
+                                state tree
+                                of a Noodel instance that you can obtain via <code
+                                    class="language-js">getState()</code>.
                             </p>
                             <p>
-                                It is important that you do not modify this state tree yourself, but instead use the API methods
+                                It is important that you do not modify this state tree yourself, but instead use the API
+                                methods
                                 provided on the Noodel instance.
                             </p>
                         </div>
                         <div class="node">
                             <p>
-                                You are not required to register the Noodel instance as reactive data. However, there is no harm
-                                in doing so (like in the example) if it suits how you manage your state in your Vue project.
+                                You are not required to register the Noodel instance as reactive data. However, there is
+                                no harm
+                                in doing so (like in the example) if it suits how you manage your state in your Vue
+                                project.
                             </p>
                         </div>
                         <div class="node">
                             <p>
-                                <img src="./alert-triangle.svg" class="link-icon" /> You do NOT need to call Noodel's 
+                                <img src="./alert-triangle.svg" class="link-icon" /> You do NOT need to call Noodel's
                                 <code class="language-js">mount()</code>
                                 or <code class="language-js">unmount()</code> when using Noodel
-                                as a Vue component. It is simply a component that gets mounted and unmounted with your Vue instance!
+                                as a Vue component. It is simply a component that gets mounted and unmounted with your
+                                Vue instance!
                             </p>
                         </div>
                     </div>
                     <div class="node">
                         <h3>Using Vue components as node content</h3>
                         <p>
-                            You can pass Vue components as node content and they will be rendered via Vue's dynamic component feature, i.e.
-                            <code class="language-markup">&lt;component :is="yourComponent"&gt;&lt;/component&gt;</code>.
+                            You can pass Vue components as node content and they will be rendered via Vue's dynamic
+                            component feature, i.e.
+                            <code
+                                class="language-markup">&lt;component :is="yourComponent"&gt;&lt;/component&gt;</code>.
                             To do so, you need to provide an object as node content:
                         </p>
                         <pre>
@@ -1269,7 +1309,8 @@
                             development a breeze.
                         </p>
                         <p>
-                            You don't need to install any additional type declarations - they come bundled out of the box
+                            You don't need to install any additional type declarations - they come bundled out of the
+                            box
                             when you install via npm.
                         </p>
                     </div>
@@ -1278,7 +1319,8 @@
                     <h3>Browser support</h3>
                     <div class="node">
                         <p>Noodel is targeted to work on all major modern browsers.</p>
-                        <p>Support for IE 10 and 11 is best-effort only - Noodel <i>should</i> work on these browsers, but
+                        <p>Support for IE 10 and 11 is best-effort only - Noodel <i>should</i> work on these browsers,
+                            but
                             there may be quirks and bugs in some features.</p>
                         <p>IE 9 and below are not supported.</p>
                     </div>
@@ -1287,543 +1329,650 @@
             <div class="node" data-class="menu-item">
                 <h2>📖 API</h2>
                 <div class="node" data-class="menu-item">
-                    <h3>Noodel<span class="label">class</span></h3>
+                    <h4>Noodel<span class="label">class</span></h4>
                     <p>The view model of a noodel. Has 2-way binding with the view.</p>
                     <div class="node">
-                        <b><code
-                                class="language-ts">constructor(contentTree: NodeDefinition[] | Element | string, options?: NoodelOptions)</code></b>
-                        <p>Creates the view model of a noodel based on the given content tree.</p>
-                        <ul>
-                            <li>
-                                <code class="language-ts">contentTree</code> Initial content tree for the noodel. Can be
-                                an array of NodeDefinition
-                                objects that specify nodes on the first level, an HTMLElement that contain templates
-                                for nodes on
-                                the first level, or a selector string for such an element. If nothing is provided, will
-                                create an empty
-                                noodel with just the root.
-                            </li>
-                            <li><code class="language-ts">options</code> Global options for the noodel</li>
-                        </ul>
+                        <h5>Lifecycle</h5>
                         <div class="node">
+                            <code
+                                class="language-ts">constructor(contentTree: NodeDefinition[] | Element | string, options?: NoodelOptions)</code>
+                            <p>Creates the view model of a noodel based on the given content tree.</p>
+                            <ul>
+                                <li>
+                                    <code class="language-ts">contentTree</code> Initial content tree for the noodel.
+                                    Can be
+                                    an array of NodeDefinition
+                                    objects that specify nodes on the first level, an HTMLElement that contain templates
+                                    for nodes on
+                                    the first level, or a selector string for such an element. If nothing is provided,
+                                    will
+                                    create an empty
+                                    noodel with just the root.
+                                </li>
+                                <li><code class="language-ts">options</code> Global options for the noodel</li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">mount(el: string | Element)</code>
+                            <p>Mounts the noodel's view into the target container element.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">unmount()</code>
+                            <p>Destroys the noodel's view and removes it from the DOM, but keeps the current state of
+                                the
+                                view model.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">nextTick(callback: () => any)</code>
+                            <p>Schedules a callback function to be called after Noodel's current processing cycle. Use
+                                this
+                                to wait for an operation to be fully processed and reflected in the DOM before the next
+                                operation.</p>
+                        </div>
+                    </div>
+                    <div class="node">
+                        <h5>Query</h5>
+                        <div class="node">
+                            <code class="language-ts">getState(): object</code>
+                            <p>Get the internal reactive state tree of this noodel. Only intended to be used
+                                as props to the Vue component in a Vue app. Should not be modified directly.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getOptions(): NoodelOptions</code>
+                            <p>Gets the options applied to this node. Returns a cloned object.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getEl(): HTMLDivElement</code>
+                            <p>Gets the container element of this noodel (i.e. nd-canvas), if mounted.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getFocalLevel(): number</code>
+                            <p>Gets the level of the current focal branch. The first branch has level 1.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getActiveTreeHeight(): number</code>
+                            <p>Gets the height (total number of levels) in the current active tree, excluding the root.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getNodeCount(): number</code>
+                            <p>Gets the number of nodes in this noodel (excluding the root).</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getRoot(): NoodelNode</code>
+                            <p>Gets the root node.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getFocalParent(): NoodelNode</code>
+                            <p>Gets the parent node of the current focal branch. Returns the root
+                                if there's no focal branch (i.e. noodel is empty).</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getFocalNode(): NoodelNode</code>
+                            <p>Gets the current focal node. Returns null if noodel is empty.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">findNodeByPath(path: number[]): NoodelNode</code>
                             <p>
-                                <b>[Deprecated]</b> You can also pass in a single NodeDefinition object that serves as
-                                the root.
+                                Gets the node at the given path, an array of 0-based indices
+                                starting from the root. Returns null if no such node exist.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">findNodeById(id: string): NoodelNode</code>
+                            <p>Gets the node with the given ID. Returns null if no such node exist.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isInInspectMode(): boolean</code>
+                            <p>Check if this noodel is in inspect mode.</p>
+                        </div>
+                    </div>
+                    <div class="node">
+                        <h5>Update / Navigation</h5>
+                        <div class="node">
+                            <code class="language-ts">setOptions(options: NoodelOptions)</code>
+                            <p>Updates the options of the noodel. Properties of the given object will be merged into the
+                                current options.</p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">setFocalLevel(level: number)</code>
+                            <p>
+                                Navigates the noodel to focus on the branch at the given level of
+                                the current active tree. If the level is greater or smaller than
+                                the possible limits, will navigate to the furthest level in that direction.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">moveIn(levelCount?: number)</code>
+                            <p>
+                                Navigates toward the child branches of the current focal node.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">levelCount</code> number of levels to move, defaults to 1
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">moveOut(levelCount?: number)</code>
+                            <p>
+                                Navigates toward the parent branches of the current focal node.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">levelCount</code> number of levels to move, defaults to 1
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">moveForward(nodeCount?: number)</code>
+                            <p>
+                                Navigates toward the next siblings of the current focal node.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">nodeCount</code> number of nodes to move, defaults to 1
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">moveBack(nodeCount?: number)</code>
+                            <p>
+                                Navigates toward the previous siblings of the current focal node.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">nodeCount</code> number of nodes to move, defaults to 1
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">toggleInspectMode(on: boolean)</code>
+                            <p>
+                                Turns inspect mode on/off.
                             </p>
                         </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">mount(el: string | Element)</code></b>
-                        <p>Mounts the noodel's view at the target element, replacing it.</p>
+                        <h5>Alignment</h5>
+                        <div class="node">
+                            <code class="language-ts">realignCanvas()</code>
+                            <p>
+                                Recapture the size of the canvas and adjust the noodel's position
+                                if necessary. Use immediately after an operation that changes
+                                the size of the canvas.
+                                Does nothing if the noodel is not mounted.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">realignAll()</code>
+                            <p>
+                                Recapture the size of the canvas,
+                                ALL nodes and ALL branches, and realign positions if necessary.
+                                Use this if you need to align everything after a size change.
+                                Does nothing if the noodel is not mounted.
+                            </p>
+                        </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">unmount()</code></b>
-                        <p>Destroys the noodel's view and removes it from the DOM, but keeping the current state of the
-                            view model.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">nextTick(callback: () => any)</code></b>
-                        <p>Schedules a callback function to be called after Noodel's current DOM update cycle. Use this
-                            if you need to access DOM elements after performing an update.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getEl(): HTMLDivElement</code></b>
-                        <p>Gets the container element of this noodel (i.e. nd-canvas), if mounted.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getFocalLevel(): number</code></b>
-                        <p>Gets the level of the current focal branch. The first branch has level 1.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getActiveTreeHeight(): number</code></b>
-                        <p>Gets the height (total number of levels) in the current active tree.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getNodeCount(): number</code></b>
-                        <p>Gets the number of nodes in this noodel (excluding the root).</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getRoot(): Node</code></b>
-                        <p>Gets the root node. The root is an invisible node that serves as the parent of the topmost
-                            branch, and always exists.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getFocalParent(): Node</code></b>
-                        <p>Gets the parent node of the current focal branch.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getFocalNode(): Node</code></b>
-                        <p>Gets the current focal node.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">findNodeByPath(path: number[]): Node</code></b>
-                        <p>
-                            Gets the node at the given path, an array of 0-based indices
-                            starting from the root (e.g [0, 2] gets the 3rd child of the first child
-                            of the root). Returns null if no node exists on that path.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">findNodeById(id: string): Node</code></b>
-                        <p>Gets the node with the given ID. Returns null if does not exist.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setOptions(options: NoodelOptions)</code></b>
-                        <p>Changes the options of the noodel. Properties of the given object will be merged into the
-                            current options.</p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setFocalLevel(level: number)</code></b>
-                        <p>
-                            Navigates the noodel to focus on the branch at the given level of
-                            the current active tree. If the level is greater or smaller than
-                            the possible limits, will navigate to the furthest level in that direction.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">moveIn(levelCount?: number)</code></b>
-                        <p>
-                            Navigates towards the child branches of the current focal node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">levelCount</code> number of levels to move, defaults to 1</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">moveOut(levelCount?: number)</code></b>
-                        <p>
-                            Navigates towards the parent branches of the current focal node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">levelCount</code> number of levels to move, defaults to 1</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">moveForward(nodeCount?: number)</code></b>
-                        <p>
-                            Navigates towards the next siblings of the current focal node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">nodeCount</code> number of nodes to move, defaults to 1</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">moveBack(nodeCount?: number)</code></b>
-                        <p>
-                            Navigates towards the previous siblings of the current focal node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">nodeCount</code> number of nodes to move, defaults to 1</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">toggleInspectMode(on: boolean)</code></b>
-                        <p>
-                            Turns inspect mode on/off.
-                        </p>
+                        <h5>Event</h5>
+                        <div class="node">
+                            <code class="language-ts">on(ev: string, listener: Function)</code>
+                            <p>
+                                Attach a listener for the given event.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">off(ev: string, listener: Function)</code>
+                            <p>
+                                Remove a listener for the given event.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="node" data-class="menu-item">
-                    <h3>Node<span class="label">class</span></h3>
+                    <h4>Node<span class="label">class</span></h4>
                     <p>The view model of a node. Has 2-way binding with the view.</p>
                     <div class="node">
-                        <b><code class="language-ts">data: any</code></b>
-                        <p>
-                            Custom data associated with this node. You can freely get/set this property.
-                        </p>
+                        <h5>Query</h5>
+                        <div class="node">
+                            <code class="language-ts">getEl(): HTMLDivElement</code>
+                            <p>
+                                Gets the nd-node element associated with this node. Returns null if
+                                noodel is not mounted.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getBranchEl(): HTMLDivElement</code>
+                            <p>
+                                Gets the nd-branch element associated with this node's child branch. Returns null if
+                                noodel is not mounted or branch does not exist.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getParent(): NoodelNode</code>
+                            <p>
+                                Gets the parent of this node. Return null if this is the root or
+                                has been detached from its parent by a delete operation.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getPath(): number[]</code>
+                            <p>
+                                Gets the path (an array of zero-based indices counting from the root) of this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getDefinition(deep?: boolean): NodeDefinition</code>
+                            <p>
+                                Extracts the definition of this node, returning a NodeDefinition object containing this
+                                node's base properties. Useful for serialization or cloning.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">deep</code> whether to extract a deep definition tree
+                                    including descendants, defaults to false</li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getChild(index: number): NoodelNode</code>
+                            <p>
+                                Gets the child of this node at the given index. Return null if does not exist.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getChildren(): NoodelNode[]</code>
+                            <p>
+                                Gets a copied array of this node's list of children.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getChildCount(): number</code>
+                            <p>
+                                Gets the number of children of this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getActiveChildIndex(): number</code>
+                            <p>
+                                Gets the index of the active child. Returns null if there's no active child.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getActiveChild(): NoodelNode</code>
+                            <p>
+                                Gets the active child of this node. Return null if there's no active child.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getId(): string</code>
+                            <p>
+                                Gets the ID of this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getContent(): string | ComponentContent</code>
+                            <p>
+                                Gets the content of this node. If content is a ComponentContent object,
+                                will return a deeply cloned object except the 'component' property which is
+                                shallowly copied.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getBranchContent(): string | ComponentContent</code>
+                            <p>
+                                Gets the branch content of this node. If content is a ComponentContent object,
+                                will return a deeply cloned object except the 'component' property which is
+                                shallowly copied.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getClassNames(): NodeCSS</code>
+                            <p>
+                                Gets a cloned object containing the custom CSS classes applied to this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getStyle(): NodeCSS</code>
+                            <p>
+                                Gets a cloned object containing the custom styles applied to this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getOptions(): NodeOptions</code>
+                            <p>
+                                Gets a cloned object containing the options applied to this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getIndex(): number</code>
+                            <p>
+                                Gets the 0-based index (position among siblings) of this node.
+                                Returns 0 if this node has been detached from its parent by a delete operation.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">getLevel(): number</code>
+                            <p>
+                                Gets the level of this node.
+                                Returns null if this node has been deleted.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isRoot(): boolean</code>
+                            <p>
+                                Check whether this node is the root.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isActive(): boolean</code>
+                            <p>
+                                Check whether this node is active.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isFocalParent(): boolean</code>
+                            <p>
+                                Check whether this node is the parent of the focal branch.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isInFocalBranch(): boolean</code>
+                            <p>
+                                Check whether this node is inside the focal branch.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isFocalNode(): boolean</code>
+                            <p>
+                                Check whether this node is the focal node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isVisible(): boolean</code>
+                            <p>
+                                Check whether this node is visible (i.e is part of the active tree
+                                in display).
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isBranchVisible(): boolean</code>
+                            <p>
+                                Check whether this node's child branch is visible (i.e is part of the active tree
+                                in display).
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">isDeleted(): boolean</code>
+                            <p>
+                                Check whether this node has been deleted from its noodel.
+                            </p>
+                        </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">isDeleted(): boolean</code></b>
-                        <p>
-                            Returns true if this node has been deleted from its noodel.
-                            Most operations on a deleted node will throw an error.
-                        </p>
+                        <h5>Update / Navigation</h5>
+                        <div class="node">
+                            <code class="language-ts">setId(id: string)</code>
+                            <p>
+                                Sets the ID of this node.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">id</code> new ID for this node, should not start with '_'
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">setContent(content: string | ComponentContent)</code>
+                            <p>
+                                Sets the content of this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">setClassNames(className: NodeCss)</code>
+                            <p>
+                                Sets the custom class names for this node. Properties of the provided object
+                                will be merged into the existing object.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">setStyles(styles: NodeCSS)</code>
+                            <p>
+                                Sets the custom inline styles for this node. Properties of the provided object
+                                will be merged into the existing object.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">setOptions(options: NodeOptions)</code>
+                            <p>
+                                Sets the options for this node. Properties of the provided object
+                                will be merged into the existing object.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">setActiveChild(index: number)</code>
+                            <p>
+                                Changes the active child of this node. If doing so will toggle
+                                the visibility of the focal branch (i.e this node is an ancestor
+                                of the focal branch), the view will jump to focus on the new active child.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">jumpToFocus()</code>
+                            <p>
+                                Performs a navigational jump to focus on this node.
+                                Cannot jump to the root.
+                            </p>
+                        </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">getParent(): Node</code></b>
-                        <p>
-                            Gets the parent of this node. All nodes should have a parent
-                            except the root, which will return null.
-                        </p>
+                        <h5>Tree Mutation</h5>
+                        <div class="node">
+                            <code
+                                class="language-ts">insertChildren(defs: NodeDefinition[] | string | Element, index?: number): NoodelNode[]</code>
+                            <p>
+                                Inserts one or more new nodes (and their descendants) as children of this node.
+                                Will always preserve the current active child if possible. Returns the
+                                list of inserted nodes.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">defs</code> array or HTML template that specifies the
+                                    definitions of the new node(s)</li>
+                                <li><code class="language-ts">index</code> index to insert at, will append to existing
+                                    children if omitted</li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code
+                                class="language-ts">insertBefore(defs: NodeDefinition[] | string | Element): NoodelNode[]</code>
+                            <p>
+                                Convenience method for inserting sibling node(s) before this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code
+                                class="language-ts">insertAfter(defs: NodeDefinition[] | string | Element): NoodelNode[]</code>
+                            <p>
+                                Convenience method for inserting sibling node(s) after this node.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">deleteChildren(index: number, count: number): NoodelNode[]</code>
+                            <p>
+                                Deletes one or more children (and their descendants) of this node.
+                                If the active child is removed, will set the next child active,
+                                unless the child is the last in the list, where the previous child
+                                will be set active. If the focal branch is deleted, will move focus
+                                to the nearest ancestor branch. Returns the list of deleted nodes.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">index</code> index to delete from</li>
+                                <li><code class="language-ts">count</code> number of children to delete, will limit to
+                                    maximum if greater than possible range</li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">deleteBefore(count: number): NoodelNode[]</code>
+                            <p>
+                                Convenience method for deleting sibling node(s) before this node.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">count</code> number of nodes to remove, will limit to
+                                    maximum if greater than possible range</li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">deleteAfter(count: number): NoodelNode[]</code>
+                            <p>
+                                Convenience method for deleting sibling node(s) after this node.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">count</code> number of nodes to remove, will limit to
+                                    maximum if greater than possible range</li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">deleteSelf()</code>
+                            <p>
+                                Convenience method for deleting this node itself.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code
+                                class="language-ts">reorderChildren(func: (children: NoodelNode[]) => NoodelNode[])</code>
+                            <p>
+                                Reorders the children of this node without using insert/delete operations, and triggers
+                                FLIP animation (if enabled). Will always preserve the current active child.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">func</code> The reorder function. Takes the array of
+                                    children of this node as parameter,
+                                    and must return an array containing the exact same set of nodes, possibly in a
+                                    different order</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">getPrev(): Node</code></b>
-                        <p>
-                            Gets the previous sibling, or null if this is already the first.
-                        </p>
+                        <h5>Traversal</h5>
+                        <div class="node">
+                            <code
+                                class="language-ts">traverseSubtree(func: (node: NoodelNode) => any, includeSelf: boolean)</code>
+                            <p>
+                                Do a preorder traversal of this node's subtree and perform the specified action
+                                on each descendant.
+                            </p>
+                            <ul>
+                                <li><code class="language-ts">func</code> the action to perform</li>
+                                <li><code class="language-ts">includeSelf</code> whether to include this node in the
+                                    traversal</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">getNext(): Node</code></b>
-                        <p>
-                            Gets the next sibling, or null if this is already the last.
-                        </p>
+                        <h5>Alignment</h5>
+                        <div class="node">
+                            <code class="language-ts">realign()</code>
+                            <p>
+                                Recapture the size of this node (on the branch axis) and adjust
+                                the branch's position if necessary. Use immediately after an operation that changes
+                                the size of this node (on the branch axis).
+                                Does nothing if this is the root or noodel is not mounted.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">realignBranch()</code>
+                            <p>
+                                Recapture the size of this node's child branch (on the trunk axis) and adjust
+                                the trunk's position if necessary. Use immediately after an operation that changes
+                                the size of this node's child branch (on the trunk axis).
+                                Does nothing if this has no children or noodel is not mounted.
+                            </p>
+                        </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">getPath(): number[]</code></b>
-                        <p>
-                            Gets the path (an array of zero-based indices counting from the root) of this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getDefinition(): NodeDefinition</code></b>
-                        <p>
-                            Extracts the definition tree of this node (including its descendents).
-                            Useful if you want to perform your own operations on the content tree.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getEl(): HTMLDivElement</code></b>
-                        <p>
-                            Gets the container element of this node (i.e. nd-node-box), if mounted.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getChildBranchEl(): HTMLDivElement</code></b>
-                        <p>
-                            Gets the container element of the branch containing this node's children
-                            (i.e. nd-branch-box), if it has children and is mounted.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getChild(index: number): Node</code></b>
-                        <p>
-                            Gets the child at the given index. Returns null if does not exist.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getChildren(): Node[]</code></b>
-                        <p>
-                            Gets a mapped array of this node's list of children.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getChildCount(): number</code></b>
-                        <p>
-                            Gets the number of children of this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getId(): string</code></b>
-                        <p>
-                            Gets the ID of this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getContent(): string | ComponentContent</code></b>
-                        <p>
-                            Gets the content of this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getClass(): string[]</code></b>
-                        <p>
-                            Gets the custom class names for this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getStyle(): object</code></b>
-                        <p>
-                            Gets the custom styles for this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getIndex(): number</code></b>
-                        <p>
-                            Gets the 0-based index (position among siblings) of this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getLevel(): number</code></b>
-                        <p>
-                            Gets the level of this node. The root has level 0,
-                            the first branch has level 1, and so on.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getActiveChildIndex(): number</code></b>
-                        <p>
-                            Gets the active child index. Returns null if there's no active child.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">getActiveChild(): Node</code></b>
-                        <p>
-                            Gets the current active child. Returns null if does not exist.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">isRoot(): boolean</code></b>
-                        <p>
-                            Returns true if this node is the root.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">isActive(): boolean</code></b>
-                        <p>
-                            Returns true if this node is active.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">isVisible(): boolean</code></b>
-                        <p>
-                            Returns true if this node is logically visible (i.e even when rendered beyond
-                            canvas boundary). Note that visibility may be delayed due to debounce effects.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">isChildrenVisible(): boolean</code></b>
-                        <p>
-                            Returns true if this node's children is logically visible (i.e even when rendered beyond
-                            canvas boundary). Note that visibility may be delayed due to debounce effects.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">isInFocalBranch(): boolean</code></b>
-                        <p>
-                            Returns true if this node is inside the focal branch.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">isFocalParent(): boolean</code></b>
-                        <p>
-                            Returns true if this node is the parent of the focal branch.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">isFocalNode(): boolean</code></b>
-                        <p>
-                            Returns true if this node is the focal node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setId(id: string)</code></b>
-                        <p>
-                            Sets the ID of this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setContent(content: string | ComponentContent)</code></b>
-                        <p>
-                            Replaces the content of this node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setClass(className: string | string[])</code></b>
-                        <p>
-                            Replaces the custom class names for this node. Can be an array or a space-delimited string.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setStyle(style: string | object)</code></b>
-                        <p>
-                            Replaces the custom inline styles for this node. Can be a string or an object of
-                            property-value
-                            pairs.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setOptions(options: NodeOptions)</code></b>
-                        <p>
-                            Changes the options for this node. Properties of the given object
-                            will be merged into the existing options.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">setActiveChild(index: number)</code></b>
-                        <p>
-                            Changes the active child of this node. If doing so will toggle
-                            the visibility of the focal branch (i.e this node is an ancestor
-                            of the focal branch), a jump to the new active child will be triggered.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">jumpToFocus()</code></b>
-                        <p>
-                            Performs a navigational jump to focus on this node.
-                            Cannot jump to the root.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">addChild(childDef: NodeDefinition, index?: number): Node</code></b>
-                        <p>
-                            Inserts a child node (and its descendents) at the given index.
-                            Will always preserve the current active child. Returns the inserted
-                            child.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">childDef</code> definition tree of the child</li>
-                            <li><code class="language-ts">index</code> if not provided, will append to the end of the
-                                children</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code
-                                class="language-ts">addChildren(childDefs: NodeDefinition[], index?: number): Node</code></b>
-                        <p>
-                            Inserts a list of child nodes (and their descendents) at the given index.
-                            Will always preserve the current active child. Returns the inserted
-                            children.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">childDefs</code> definition trees of the children</li>
-                            <li><code class="language-ts">index</code> if not provided, will append to the end of the
-                                children</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">addBefore(...defs: NodeDefinition[]): Node[]</code></b>
-                        <p>
-                            Syntax sugar for adding sibling node(s) before this node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">defs</code> node definitions to add</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">addAfter(...defs: NodeDefinition[]): Node[]</code></b>
-                        <p>
-                            Syntax sugar for adding sibling node(s) after this node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">defs</code> node definitions to add</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">removeChild(index: number): NodeDefinition</code></b>
-                        <p>
-                            Removes a child node (and its descendents) at the given index.
-                            If the active child is removed, will set the next child active,
-                            unless the child is the last in the list, where the previous child
-                            will be set active. If the focal branch is deleted, will jump
-                            to the nearest ancestor branch. Returns the definition of the deleted node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code
-                                class="language-ts">removeChildren(index: number, count: number): NodeDefinition[]</code></b>
-                        <p>
-                            Removes children nodes (and their descendents) at the given index.
-                            If the active child is removed, will set the next child active,
-                            unless the child is the last in the list, where the previous child
-                            will be set active. If the focal branch is deleted, will jump
-                            to the nearest ancestor branch. Returns the definitions of the deleted nodes.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">count</code> number of children to remove, will adjust to
-                                maximum if greater than possible range</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">removeBefore(count: number): NodeDefinition[]</code></b>
-                        <p>
-                            Syntax sugar for removing sibling node(s) before this node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">count</code> number of nodes to remove, will adjust to
-                                maximum if greater than possible range</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">removeAfter(count: number): NodeDefinition[]</code></b>
-                        <p>
-                            Syntax sugar for removing sibling node(s) after this node.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">count</code> number of nodes to remove, will adjust to
-                                maximum if greater than possible range</li>
-                        </ul>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">removeSelf(): NodeDefinition</code></b>
-                        <p>
-                            Syntax sugar for removing this node from the tree.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code
-                                class="language-ts">traverseSubtree(func: (node: Node) => any, includeSelf: boolean)</code></b>
-                        <p>
-                            Do a preorder traversal of this node's subtree and perform the specified action
-                            on each descendent.
-                        </p>
-                        <ul>
-                            <li><code class="language-ts">func</code> the action to perform</li>
-                            <li><code class="language-ts">includeSelf</code> whether to include this node in the
-                                traversal</li>
-                        </ul>
+                        <h5>Event</h5>
+                        <div class="node">
+                            <code class="language-ts">on(ev: string, listener: Function)</code>
+                            <p>
+                                Attach an event listener on this node. See here for the list of events available.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">off(ev: string, listener: Function)</code>
+                            <p>
+                                Remove an event listener from this node.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="node" data-class="menu-item">
-                    <h3>NodeDefinition<span class="label">interface</span></h3>
+                    <h4>NodeDefinition<span class="label">interface</span></h4>
                     <p>
                         Object template used for node creation and insertion.
                     </p>
                     <div class="node">
-                        <b><code class="language-ts">id?: string</code></b>
+                        <code class="language-ts">id?: string</code>
                         <p>
                             ID of this node. If provided, must be unique and should NOT start with "_" .
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">children?: NodeDefinition[]</code></b>
+                        <code class="language-ts">children?: NodeDefinition[]</code>
                         <p>
                             Children nodes of this node. Defaults to an empty array.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">isActive?: boolean</code></b>
+                        <code class="language-ts">isActive?: boolean</code>
                         <p>
                             If provided, will mark this node as active, overriding the default (first child).
                             If multiple siblings are marked as active, only the first one will take effect.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">content?: string | ComponentContent</code></b>
+                        <code class="language-ts">content?: string | ComponentContent</code>
                         <p>
-                            Content of this node. If is a string, will be inserted as innerHTML of the <code
-                                class="language-css">nd-node</code> element.
+                            Content of this node. If is a string, will be inserted as innerHTML of the nd-content-box
+                            element.
                             Can also be a ComponentContent object that wraps a Vue component.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">className?: string | string[]</code></b>
+                        <code class="language-ts">branchContent?: string | ComponentContent</code>
                         <p>
-                            Custom class(es) for this node. Either a string of class names delimited by spaces
-                            or an array.
+                            Content for this node's child branch. If is a string, will be inserted as innerHTML
+                            of the nd-branch-content-box element. Can also be a ComponentContent object that wraps a Vue
+                            component.
+                            Only rendered if this node has a child branch (i.e. has at least 1 child).
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">style?: string | object</code></b>
+                        <code class="language-ts">classNames?: NodeCss</code>
                         <p>
-                            Custom styles for this node. Either a string in inline style format
-                            or an object in {"property": "value"} format.
+                            An object specifying custom CSS class(es) to apply to various elements associated with a
+                            node. Each property should be a string of one or more classes delimited by spaces.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">options?: NodeOptions</code></b>
+                        <code class="language-ts">styles?: NodeCss</code>
+                        <p>
+                            An object specifying custom CSS styles to apply to various elements associated with a
+                            node. Each property should be a string in inline style format.
+                        </p>
+                    </div>
+                    <div class="node">
+                        <code class="language-ts">options?: NodeOptions</code>
                         <p>
                             Options for this node.
                         </p>
                     </div>
-                    <div class="node">
-                        <b><code class="language-ts">data?: any</code></b>
-                        <p>
-                            Custom data to associate with this node.
-                        </p>
-                    </div>
                 </div>
                 <div class="node" data-class="menu-item">
-                    <h3>NoodelOptions<span class="label">interface</span></h3>
+                    <h4>NoodelOptions<span class="label">interface</span></h4>
                     <p>Global options for a noodel.</p>
                     <div class="node">
-                        <b><code class="language-ts">visibleSubtreeDepth?: number</code></b>
+                        <code class="language-ts">visibleSubtreeDepth?: number</code>
                         <p>
-                            The number of levels of descendent branches to show
+                            The number of levels of descendant branches to show
                             after the current focal branch. Defaults to 1.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">retainDepthOnTapNavigation?: boolean</code></b>
+                        <code class="language-ts">retainDepthOnTapNavigation?: boolean</code>
                         <p>
                             If true, will keep the current branch depth (if possible) when
                             tapping on the sibling of an ancestor. Useful to create an effect similar to conventional
@@ -1831,324 +1980,408 @@
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">subtreeDebounceInterval?: number</code></b>
-                        <p>
-                            Amount of time to wait in ms (until no more consecutive hits) before showing the
-                            subtree of the focal node, when moving the focal branch. Mainly a performance hack
-                            to prevent rapid toggling of subtree elements. Defaults to 360.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">useKeyNavigation?: boolean</code></b>
+                        <code class="language-ts">useKeyNavigation?: boolean</code>
                         <p>
                             Whether to apply the default keyboard navigation. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">useWheelNavigation?: boolean</code></b>
+                        <code class="language-ts">useWheelNavigation?: boolean</code>
                         <p>
                             Whether to apply the default wheel navigation. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">useSwipeNavigation?: boolean</code></b>
+                        <code class="language-ts">useSwipeNavigation?: boolean</code>
                         <p>
                             Whether to apply the default swipe navigation. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">useTapNavigation?: boolean</code></b>
+                        <code class="language-ts">useTapNavigation?: boolean</code>
                         <p>
                             Whether to apply the default tap navigation. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">useInspectModeKey?: boolean</code></b>
+                        <code class="language-ts">useInspectModeKey?: boolean</code>
                         <p>
                             Whether to allow toggling inspect mode via the Enter key. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">useInspectModeDoubleTap?: boolean</code></b>
+                        <code class="language-ts">useInspectModeDoubleTap?: boolean</code>
                         <p>
                             Whether to allow toggling inspect mode via the double tap. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">skipResizeDetection?: boolean</code></b>
+                        <code class="language-ts">useRouting?: boolean</code>
                         <p>
-                            Global option for disabling resize detection on ALL nodes and branches.
-                            Disabling resize detection may give a slight performance boost. Use this option if you
-                            know that the size of nodes and branches will never change after creation.
-                            Defaults to false.
+                            Whether routing should be enabled for this noodel. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">swipeMultiplierBranch?: number</code></b>
+                        <code class="language-ts">swipeMultiplierBranch?: number</code>
                         <p>
                             Number of pixels to move for every pixel swiped in the branch axis. Defaults to 1.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">swipeMultiplierTrunk?: number</code></b>
+                        <code class="language-ts">swipeMultiplierTrunk?: number</code>
                         <p>
                             Number of pixels to move for every pixel swiped in the trunk axis. Defaults to 1.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">snapMultiplierBranch?: number</code></b>
+                        <code class="language-ts">snapMultiplierBranch?: number</code>
                         <p>
                             Number of nodes (per unit of velocity) to snap across after a swipe is released.
                             Defaults to 1.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">snapMultiplierTrunk?: number</code></b>
+                        <code class="language-ts">snapMultiplierTrunk?: number</code>
                         <p>
                             Number of levels (per unit of velocity) to snap across after a swipe is released.
                             Defaults to 1.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">useRouting?: boolean</code></b>
-                        <p>
-                            Determines whether routing should be enabled for this noodel. Defaults to true.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">showLimitIndicators?: boolean</code></b>
+                        <code class="language-ts">showLimitIndicators?: boolean</code>
                         <p>
                             Whether to render the limit indicators of the canvas. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">showChildIndicators?: boolean</code></b>
+                        <code class="language-ts">showChildIndicators?: boolean</code>
                         <p>
                             Whether to render the child indicators of nodes. Defaults to true.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">showBranchBackdrops?: boolean</code></b>
-                        <p>
-                            Whether to render the branch backdrop elements. Defaults to false.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">orientation?: 'ltr' | 'rtl' | 'ttb' | 'btt'</code></b>
+                        <code class="language-ts">orientation?: 'ltr' | 'rtl' | 'ttb' | 'btt'</code>
                         <p>
                             Determines the direction of the trunk axis. Defaults to 'ltr' (left to right).
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">branchDirection?: 'normal' | 'reverse'</code></b>
+                        <code class="language-ts">branchDirection?: 'normal' | 'reverse'</code>
                         <p>
                             Determines the direction of the branch axis under the current trunk orientation.
                             Defaults to 'normal'.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">onMount?: () => any | null</code></b>
+                        <code class="language-ts">focalOffsetTrunk?: (canvasLengthTrunk: number) => number</code>
                         <p>
-                            Callback after the view has been mounted and properly aligned
-                            after the first render. Changes to the view model from here onward
-                            will sync with the view and trigger animation effects.
+                            A function that determines the trunk-axis offset on the canvas where
+                            each branch should align to if they become focal, given the trunk-axis length of the canvas
+                            as reference.
+                            Should return a number of pixels counting from the trunk-axis origin of the canvas.
+                            If the number is greater than the canvas length, will use the canvas length.
+                            Defaults to 1/2 of the canvas length.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code
-                                class="language-ts">onFocalNodeChange?: (current: Node, prev: Node) => any | null</code></b>
+                        <code class="language-ts">focalOffsetBranch?: (canvasLengthBranch: number) => number</code>
                         <p>
-                            Handler called once after noodel creation, and whenever the focal node
-                            has changed.
+                            A function that determines the branch-axis offset on the canvas where
+                            each node should align to if they become active, given the branch-axis length of the canvas
+                            as reference.
+                            Should return a number of pixels counting from the branch-axis origin of the canvas.
+                            If the number is greater than the canvas length, will use the canvas length.
+                            Defaults to 1/2 of the canvas length.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">current</code> the current focal node</li>
-                            <li><code class="language-ts">prev</code> the previous focal node, null on initial call
-                            </li>
-                        </ul>
                     </div>
                     <div class="node">
-                        <b><code
-                                class="language-ts">onFocalParentChange?: (current: Node, prev: Node) => any | null</code></b>
+                        <code class="language-ts">anchorOffsetTrunk?: (branchLength: number) => number</code>
                         <p>
-                            Handler called once after noodel creation, and whenever the focal parent
-                            has changed.
+                            A function that determines the trunk-axis offset on each branch
+                            that should align to the focal offset if they become focal, given their length on the trunk
+                            axis.
+                            Should return a number of pixels counting from the trunk-axis origin of the branch.
+                            If the number exceeds the branch length, will use the branch length.
+                            Defaults to 1/2 of the branch length.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">current</code> the current focal parent</li>
-                            <li><code class="language-ts">prev</code> the previous focal parent, null on initial call
-                            </li>
-                        </ul>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">onEnterInspectMode?: (node: Node) => any | null</code></b>
+                        <code class="language-ts">anchorOffsetBranch?: (nodeLength: number) => number</code>
                         <p>
-                            Handler called when entered inspect mode.
+                            A function that determines the branch-axis offset on each node
+                            that should align to the focal position if they become active, given their length on the
+                            branch axis.
+                            Should return a number of pixels counting from the branch-axis origin of the node.
+                            If the number exceeds the node length, will use the node length.
+                            Defaults to 1/2 of the node length.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">node</code> the current focal node</li>
-                        </ul>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">onExitInspectMode?: (node: Node) => any | null</code></b>
+                        <code class="language-ts">useFlipAnimation?: boolean</code>
                         <p>
-                            Handler called when exited inspect mode.
+                            Whether to apply FLIP animations when inserting, deleting or reordering nodes.
+                            If true, you must also specify CSS transition of the transform property for nodes
+                            via the nd-node-move class. Defaults to false.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">node</code> the current focal node</li>
-                        </ul>
                     </div>
                 </div>
                 <div class="node" data-class="menu-item">
-                    <h3>NodeOptions<span class="label">interface</span></h3>
+                    <h4>NodeOptions<span class="label">interface</span></h4>
                     <p>Options for an individual node.</p>
                     <div class="node">
-                        <b><code class="language-ts">skipResizeDetection?: boolean | null</code></b>
-                        <p>
-                            Option for disabling resize detection (on the branch axis) for this node.
-                            If set to a boolean, will override the global skipResizeDetection option.
-                            Defaults to null.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">skipBranchResizeDetection?: boolean | null</code></b>
-                        <p>
-                            Option for disabling resize detection (on the trunk axis) for this node's child branch.
-                            If set to a boolean, will override the global skipResizeDetection option. Defaults to null.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <b><code class="language-ts">showChildIndicator?: boolean | null</code></b>
+                        <code class="language-ts">showChildIndicator?: boolean | null</code>
                         <p>
                             If set to a boolean, will override the global showChildIndicators option for
                             this specific node. Defaults to null.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">showBranchBackdrop?: boolean | null</code></b>
+                        <code class="language-ts">focalOffsetTrunk?: (canvasLengthTrunk: number) => number</code>
                         <p>
-                            If set to a boolean, will override the global showBranchBackdrops option for
-                            the child branch of this specific node. Defaults to null.
+                            If set to a function, will override the global focalOffsetTrunk option for
+                            this specific node's child branch. Defaults to null.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">onEnterFocus?: (self: Node, prev: Node) => any | null</code></b>
+                        <code class="language-ts">focalOffsetBranch?: (canvasLengthBranch: number) => number</code>
                         <p>
-                            Handler called whenever this node entered focus. Will be called once after noodel creation
-                            if this is the focal node.
+                            If set to a function, will override the global focalOffsetBranch option for
+                            this specific node. Defaults to null.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">self</code> the current focal node (i.e. this node)</li>
-                            <li><code class="language-ts">prev</code> the previous focal node, null on initial call
-                            </li>
-                        </ul>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">onExitFocus?: (self: Node, current: Node) => any | null</code></b>
+                        <code class="language-ts">anchorOffsetTrunk?: (branchLength: number) => number</code>
                         <p>
-                            Handler called whenever this node exited focus.
+                            If set to a function, will override the global anchorOffsetTrunk option for
+                            this specific node's child branch. Defaults to null.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">self</code> the previous focal node (i.e. this node)</li>
-                            <li><code class="language-ts">current</code> the current focal node</li>
-                        </ul>
                     </div>
                     <div class="node">
-                        <b><code
-                                class="language-ts">onChildrenEnterFocus?:  (self: Node, prev: Node) => any | null</code></b>
+                        <code class="language-ts">anchorOffsetBranch?: (nodeLength: number) => number</code>
                         <p>
-                            Handler called whenever this node's child branch entered focus. Will be called once after
-                            noodel creation
-                            if this is the focal parent.
+                            If set to a function, will override the global anchorOffsetBranch option for
+                            this specific node. Defaults to null.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">self</code> the current focal parent (i.e. this node)</li>
-                            <li><code class="language-ts">prev</code> the previous focal parent, null on initial call
-                            </li>
-                        </ul>
                     </div>
                     <div class="node">
-                        <b><code
-                                class="language-ts">onChildrenExitFocus?:  (self: Node, current: Node) => any | null</code></b>
+                        <code class="language-ts">useFlipAnimation?: boolean</code>
                         <p>
-                            Handler called whenever this node's child branch exited focus.
+                            If set to a boolean, will override the global useFlipAnimation option for
+                            this specific node's child branch. Defaults to null.
                         </p>
-                        <ul>
-                            <li><code class="language-ts">self</code> the previous focal parent (i.e. this node)</li>
-                            <li><code class="language-ts">prev</code> the current focal parent</li>
-                        </ul>
-                    </div>
+                    </div>                 
                 </div>
                 <div class="node" data-class="menu-item">
-                    <h3>ComponentContent<span class="label">interface</span></h3>
+                    <h4>ComponentContent<span class="label">interface</span></h4>
                     <p>Object template used for passing a Vue component as node content.</p>
                     <div class="node">
-                        <b><code class="language-ts">component: string | object | Function</code></b>
+                        <code class="language-ts">component: string | object | Function</code>
                         <p>
                             Vue component to be rendered using Vue's &lt;component&gt; tag. Can be name or component
                             reference.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">props?: object</code></b>
+                        <code class="language-ts">props?: object</code>
                         <p>
                             Name-value pairs of props to pass to this component.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-ts">eventListeners?: object</code></b>
+                        <code class="language-ts">eventListeners?: object</code>
                         <p>
                             Name-value pairs of event listeners to pass to this component.
                         </p>
                     </div>
                 </div>
                 <div class="node" data-class="menu-item">
+                    <h4>NodeCSS<span class="label">interface</span></h4>
+                    <p>Object template used for specifying custom CSS classes and styles on nodes.</p>
+                    <div class="node">
+                        <code class="language-ts">node: string</code>
+                        <p>
+                            CSS applied to the nd-node element.
+                        </p>
+                    </div>
+                    <div class="node">
+                        <code class="language-ts">contentBox: string</code>
+                        <p>
+                            CSS applied to the nd-content-box element.
+                        </p>
+                    </div>
+                    <div class="node">
+                        <code class="language-ts">childIndicator: string</code>
+                        <p>
+                            CSS applied to the nd-child-indicator element.
+                        </p>
+                    </div>
+                    <div class="node">
+                        <code class="language-ts">branch: string</code>
+                        <p>
+                            CSS applied to the nd-branch element.
+                        </p>
+                    </div>
+                    <div class="node">
+                        <code class="language-ts">branchContentBox: string</code>
+                        <p>
+                            CSS applied to the nd-branch-content-box element.
+                        </p>
+                    </div>
+                    <div class="node">
+                        <code class="language-ts">branchSlider: string</code>
+                        <p>
+                            CSS applied to the nd-branch-slider element.
+                        </p>
+                    </div>
+                </div>
+                <div class="node" data-class="menu-item">
+                    <h4>Events<span class="label">interface</span></h4>
+                    <p>List of events you can listen to.</p>
+                    <div class="node">
+                        <h5>Noodel</h5>
+                        <div class="node">
+                            <code class="language-ts">focalNodeChange</code>
+                            <p>
+                                Event triggered every time the focal node has changed.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">(current: Node, prev: Node) => any</code></li>
+                                <ul>
+                                    <li><code class="language-ts">current</code> the current focal node</li>
+                                    <li><code class="language-ts">prev</code> the previous focal node</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">focalParentChange</code>
+                            <p>
+                                Event triggered every time the focal parent has changed.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">(current: Node, prev: Node) => any</code></li>
+                                <ul>
+                                    <li><code class="language-ts">current</code> the current focal node</li>
+                                    <li><code class="language-ts">prev</code> the previous focal node</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">enterInspectMode</code>
+                            <p>
+                                Event triggered after entering inspect mode.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">() => any</code></li>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">exitInspectMode</code>
+                            <p>
+                                Event triggered after exiting inspect mode.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">() => any</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="node">
+                        <h5>NoodelNode</h5>
+                        <div class="node">
+                            <code class="language-ts">enterFocus</code>
+                            <p>
+                                Event triggered after this node entered focus.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">(prev: NoodelNode) => any</code></li>
+                                <ul>
+                                    <li><code class="language-ts">prev</code> the previous focal node</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">exitFocus</code>
+                            <p>
+                                Event triggered after this node exited focus.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">(current: NoodelNode) => any</code></li>
+                                <ul>
+                                    <li><code class="language-ts">current</code> the current focal node</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">childrenEnterFocus</code>
+                            <p>
+                                Event triggered after this node's child branch entered focus.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">(prev: NoodelNode) => any</code></li>
+                                <ul>
+                                    <li><code class="language-ts">prev</code> the previous focal parent</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="node">
+                            <code class="language-ts">childrenExitFocus</code>
+                            <p>
+                                Event triggered after this node's child branch exited focus.
+                            </p>
+                            <ul>
+                                <li>Listener: <code class="language-ts">(current: NoodelNode) => any</code></li>
+                                <ul>
+                                    <li><code class="language-ts">current</code> the current focal parent</li>
+                                </ul>
+                            </ul>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="node" data-class="menu-item">
                     <h3>CSS classes</h3>
                     <p>List of CSS classes you can use for styling.</p>
                     <div class="node" data-id="nd-canvas">
-                        <b><code class="language-css">nd-canvas</code></b>
+                        <code class="language-css">nd-canvas</code>
                         <p>
                             Outermost container of the noodel that processes all inputs.
                             Use this to style the canvas size and background.
                         </p>
                     </div>
                     <div class="node" data-id="nd-canvas">
-                        <b><code
-                                class="language-css">nd-canvas-ltr, nd-canvas-rtl, nd-canvas-ttb, nd-canvas-btt</code></b>
+                        <code class="language-css">nd-canvas-ltr, nd-canvas-rtl, nd-canvas-ttb, nd-canvas-btt</code>
                         <p>
                             Class applied to the canvas element depending on the current trunk orientation.
                             Use this with descendent combinators to style elements under a specific orientation.
                         </p>
                     </div>
                     <div class="node" data-id="nd-canvas">
-                        <b><code class="language-css">nd-canvas-normal, nd-canvas-reverse</code></b>
+                        <code class="language-css">nd-canvas-normal, nd-canvas-reverse</code>
                         <p>
                             Class applied to the canvas element depending on the current branch direction.
                             Use this with descendent combinators to style elements under a specific branch direction.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code
-                                class="language-css">nd-limit, nd-limit-left, nd-limit-right, nd-limit-top, nd-limit-bottom</code></b>
+                        <code
+                            class="language-css">nd-limit, nd-limit-left, nd-limit-right, nd-limit-top, nd-limit-bottom</code>
                         <p>
                             Classes applied to the limit indicators (the bars that come up when you reach the view
                             limits).
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-limit-[transition class]</code></b>
+                        <code class="language-css">nd-limit-[transition class]</code>
                         <p>
                             <a href="#transition-classes">Transition classes</a> for enter/leave of limit indicators.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-trunk</code></b>
+                        <code class="language-css">nd-trunk</code>
                         <p>
                             The trunk container. You should not need to style this element directly in most cases.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-trunk-move</code></b>
+                        <code class="language-css">nd-trunk-move</code>
                         <p>
                             Class applied to the <code class="language-css">nd-trunk</code> element when moving in the
                             trunk axis.
@@ -2156,7 +2389,7 @@
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-box</code></b>
+                        <code class="language-css">nd-branch-box</code>
                         <p>
                             Outermost container of a branch that is responsible for its visibility. Occupies 100% length
                             of the canvas.
@@ -2165,19 +2398,19 @@
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-box-focal</code></b>
+                        <code class="language-css">nd-branch-box-focal</code>
                         <p>
                             Applied to the focal <code class="language-css">nd-branch-box</code> element.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-box-[transition class]</code></b>
+                        <code class="language-css">nd-branch-box-[transition class]</code>
                         <p>
                             <a href="#transition-classes">Transition classes</a> for enter/leave of branches.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-backdrop</code></b>
+                        <code class="language-css">nd-branch-backdrop</code>
                         <p>
                             Absolute positioned child of the <code class="language-css">nd-branch-box</code> element
                             that is optionally rendered.
@@ -2186,13 +2419,13 @@
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-backdrop-focal</code></b>
+                        <code class="language-css">nd-branch-backdrop-focal</code>
                         <p>
                             Applied to the focal <code class="language-css">nd-branch-backdrop</code> element.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch</code></b>
+                        <code class="language-css">nd-branch</code>
                         <p>
                             Outer container for the items of a branch that is responsible for its sliding movement.
                             Avoid styling this element directly, use <code class="language-css">nd-branch-inner</code>
@@ -2200,13 +2433,13 @@
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-focal</code></b>
+                        <code class="language-css">nd-branch-focal</code>
                         <p>
                             Applied to the focal <code class="language-css">nd-branch</code> element.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-move</code></b>
+                        <code class="language-css">nd-branch-move</code>
                         <p>
                             Class applied to an <code class="language-css">nd-branch</code> element when moving in the
                             branch axis.
@@ -2214,7 +2447,7 @@
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-inner</code></b>
+                        <code class="language-css">nd-branch-inner</code>
                         <p>
                             Immediate container for the items of a branch. Prefer to style this instead of <code
                                 class="language-css">nd-branch</code>
@@ -2222,46 +2455,46 @@
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-branch-inner-focal</code></b>
+                        <code class="language-css">nd-branch-inner-focal</code>
                         <p>
                             Applied to the focal <code class="language-css">nd-branch-inner</code> element.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-node-box</code></b>
+                        <code class="language-css">nd-node-box</code>
                         <p>
                             Outermost container of a node.
                             Avoid styling this element directly, use <code class="language-css">nd-node</code> instead.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-node-box-active</code></b>
+                        <code class="language-css">nd-node-box-active</code>
                         <p>
                             Applied to an active <code class="language-css">nd-node-box</code> element.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-node</code></b>
+                        <code class="language-css">nd-node</code>
                         <p>
                             Immediate container of your node content. Use this class to control the size and aesthetics
                             of your nodes.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-node-active</code></b>
+                        <code class="language-css">nd-node-active</code>
                         <p>
                             Applied to an active <code class="language-css">nd-node</code> element.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-node-[transition class]</code></b>
+                        <code class="language-css">nd-node-[transition class]</code>
                         <p>
                             <a href="#transition-classes">Transition classes</a> for enter/leave of nodes
                             during node insert/delete.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-node-move</code></b>
+                        <code class="language-css">nd-node-move</code>
                         <p>
                             Applied to sibling nodes during node insert/delete. Use this class
                             to control the animation of siblings as they change position.
@@ -2275,45 +2508,45 @@
                         </div>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-node-inspect</code></b>
+                        <code class="language-css">nd-node-inspect</code>
                         <p>
                             Applied to the focal node during inspect mode.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-inspect-backdrop</code></b>
+                        <code class="language-css">nd-inspect-backdrop</code>
                         <p>
                             The backdrop element that appears during inspect mode.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-inspect-backdrop-[transition class]</code></b>
+                        <code class="language-css">nd-inspect-backdrop-[transition class]</code>
                         <p>
                             <a href="#transition-classes">Transition classes</a> for enter/leave of the backdrop.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-child-indicator</code></b>
+                        <code class="language-css">nd-child-indicator</code>
                         <p>
                             Class for the child indicator element (the "arrow" that indicates
                             nodes with children).
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-child-indicator-active</code></b>
+                        <code class="language-css">nd-child-indicator-active</code>
                         <p>
                             Applied to the <code class="language-css">nd-child-indicator</code> of an active node.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-child-indicator-expanded</code></b>
+                        <code class="language-css">nd-child-indicator-expanded</code>
                         <p>
                             Applied to the <code class="language-css">nd-child-indicator</code> of a node that has
                             visible children.
                         </p>
                     </div>
                     <div class="node">
-                        <b><code class="language-css">nd-child-indicator-[transition class]</code></b>
+                        <code class="language-css">nd-child-indicator-[transition class]</code>
                         <p>
                             <a href="#transition-classes">Transition classes</a> for enter/leave of child indicators
                             during node insert/delete.

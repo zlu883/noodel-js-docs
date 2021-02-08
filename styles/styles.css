@@ -42,10 +42,11 @@ a:hover {
 
 pre[class*="language-"] {
     overflow: hidden;
+    white-space: pre-wrap;
 }
 
-code[class*="language-"] {
-    font-size: .9em;
+:not(pre) > code[class*="language-"] {
+    font-weight: bold;
 }
 
 .nd-node-inspect pre[class*="language-"] {
