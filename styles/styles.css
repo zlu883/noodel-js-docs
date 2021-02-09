@@ -40,6 +40,7 @@ a:hover {
     text-decoration: underline;
 }
 
+code[class*="language-"],
 pre[class*="language-"] {
     overflow: hidden;
     white-space: pre-wrap;
@@ -49,7 +50,7 @@ pre[class*="language-"] {
     font-weight: bold;
 }
 
-.nd-node-inspect pre[class*="language-"] {
+.nd-canvas-inspect pre[class*="language-"] {
     overflow: auto;
 }
 

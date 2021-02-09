@@ -352,7 +352,7 @@
                                 There is a separate build of Noodel called <code
                                     class="language-html">noodel-no-vue.umd.js</code>. This version comes
                                 without Vue.js bundled and is intended to be used in Vue projects where the Vue
-                                script is included separately, to prevent including Vue twice. See <a
+                                script is already included, to prevent including Vue twice. See <a
                                     href="#usage-vue-summary">Usage with Vue</a> for more details.
                             </p>
                         </div>
@@ -501,6 +501,11 @@
                     <h3>Configuring your noodel</h3>
                     <div class="node">
                         <h4>Specifying options</h4>
+                        <p>
+                            Setting options can only be done via
+                            JavaScript. If your noodel is defined by an HTML template you still need to
+                            set your noodel and node options programmatically.
+                        </p>
                         <pre>
                             <code class="language-js">
                                 // setting options for individual nodes
@@ -518,13 +523,6 @@
                                 });
                             </code>
                         </pre>
-                        <div class="node">
-                            <p>
-                                Setting options can only be done via
-                                JavaScript. If your noodel is defined by an HTML template you still need to
-                                set your noodel and node options programmatically.
-                            </p>
-                        </div>
                     </div>
                     <div class="node">
                         <h4>Specifying node ID</h4>
@@ -547,12 +545,10 @@
                                 }
                             </code>
                         </pre>
-                        <div class="node">
-                            <p>
-                                Your custom ID must be unique and should not start with "_" as it may conflict
-                                with Noodel's default IDs.
-                            </p>
-                        </div>
+                        <p>
+                            Your custom ID must be unique and should not start with "_" as it may conflict
+                            with Noodel's default IDs.
+                        </p>
                     </div>
                     <div class="node">
                         <h4>Specifying initial active child</h4>
@@ -587,7 +583,7 @@
                         <p>
                             You can assign custom CSS classes/styles to the various DOM elements associated with each
                             node.
-                            See the API for the list of different elements you can style.
+                            <a href="#nodecss">See here</a> for the list of different elements you can style.
                         </p>
                         <pre>
                             <code class="language-html">
@@ -648,7 +644,7 @@
                         <h4>Listening to events</h4>
                         <p>
                             You can attach one or more event listeners for each event on both the noodel
-                            and its individual nodes. See the API for the list of events available.
+                            and its individual nodes. <a href="#events">See here</a> for the list of events available.
                         </p>
                         <pre>
                             <code class="language-js">
@@ -666,7 +662,7 @@
                 <div class="node">
                     <h3>Navigation prevention</h3>
                     <div class="node">
-                        <h3>Preventing navigation</h3>
+                        <h4>Preventing navigation</h4>
                         <p>
                             By default, a noodel responds to four types of user input for navigation:
                             swipe(drag), keyboard, scroll wheel, and tap. Navigation will occur even
@@ -679,7 +675,7 @@
                         </p>
                     </div>
                     <div class="node" data-id="prevention-class">
-                        <h3>Prevention classes</h3>
+                        <h4>Prevention classes</h4>
                         <p>
                             To address this issue, Noodel provides the following "prevention classes" that you can
                             selectively apply to individual elements in your content:
@@ -696,16 +692,16 @@
                             behaviour.
                         </p>
                         <pre>
-                        <code class="language-html">
-                            &lt;div class="node"&gt;
-                                &lt;input type="text" class="nd-prevent-swipe nd-prevent-key"&gt;&lt;/input&gt;
-                                &lt;button class="nd-prevent-tap"&gt;Submit&lt;/button&gt;
-                            &lt;/div&gt;
-                        </code>
-                    </pre>
+                            <code class="language-html">
+                                &lt;div class="node"&gt;
+                                    &lt;input type="text" class="nd-prevent-swipe nd-prevent-key"&gt;&lt;/input&gt;
+                                    &lt;button class="nd-prevent-tap"&gt;Submit&lt;/button&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
                     </div>
                     <div class="node">
-                        <h3>Caveat</h3>
+                        <h4>Caveat</h4>
                         <p>
                             You should use prevention classes sparingly, on elements that really need them. Having large
                             blocks of content with navigation prevention may impact usability, especially on smaller
@@ -722,10 +718,10 @@
                 <div class="node">
                     <h3>Inspect mode</h3>
                     <div class="node" data-id="inspect-mode-summary">
-                        <h3>Summary</h3>
+                        <h4>Summary</h4>
                         <p>
-                            For swipe-based interfaces such as Noodel, there is always an unresolvable conflict between
-                            the swipe mechanism and native conveniences that depend on the same motion, such as text
+                            For swipe-based interfaces such as Noodel, there is always an unavoidable conflict between
+                            the swipe mechanism and native mechanisms that depend on the same motion, such as text
                             selection.
                         </p>
                         <p>
@@ -742,13 +738,13 @@
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Inspect mode trigger</h3>
+                        <h4>Inspect mode trigger</h4>
                         <p>
                             The default trigger for inspect mode is the double tap (on any area of the noodel), or the
                             Enter key on a keyboard.
                         </p>
                         <p>
-                            This trigger has be chosen for maximum convenience and device compatibility, but like
+                            This trigger is chosen for maximum convenience and compatibility, but like
                             anything else it does end up conflicting
                             with interactions such as multiple clicks to select a word/line. If you wish to prevent the
                             default trigger you can
@@ -757,28 +753,26 @@
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Node content overflow</h3>
+                        <h4>Viewing overflow content</h4>
                         <p>
                             The inspect mode is also used for viewing overflow content in nodes.
                             Scrolling inside nodes is disabled normally but enabled during inspect mode.
                         </p>
-                        <div class="node">
-                            <p>
-                                Noodel is based on the principle of content chunking. Because
-                                each node has a limited space, as a general rule, you should try to break down
-                                large blocks of content into bite-sized pieces that can fit into individual nodes.
-                            </p>
-                            <p>
-                                However, this can be impractical in many situations, so inspect mode is provided as a
-                                fallback for viewing overflow content.
-                            </p>
-                        </div>
+                        <p>
+                            Noodel is based on the principle of content chunking. Because
+                            each node has a limited space, as a general rule, you should try to break down
+                            large blocks of content into bite-sized pieces that can fit into individual nodes.
+                        </p>
+                        <p>
+                            However, this can be impractical in many situations, so inspect mode is provided as a
+                            fallback for viewing overflow content.
+                        </p>
                     </div>
                 </div>
                 <div class="node">
-                    <h3>Changing the view dynamically</h3>
+                    <h3>Updating the view dynamically</h3>
                     <div class="node">
-                        <h3>The view model</h3>
+                        <h4>The view model</h4>
                         <p>
                             The object instance you get when you create a noodel is its "view model". You
                             can also obtain the view model of individual nodes via methods on the noodel
@@ -786,7 +780,7 @@
                         </p>
                         <p>
                             These view models have 2-way sync with the view, and provide extensive API
-                            methods for you to dynamically update almost every aspect of the content tree.
+                            methods for you to dynamically query and update almost every aspect of the content tree.
                         </p>
                         <pre>
                             <code class="language-js">
@@ -806,28 +800,28 @@
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Programmatic navigation</h3>
+                        <h4>Programmatic navigation</h4>
                         <pre>
-                        <code class="language-js">
-                            const noodel = new Noodel(...);
-                            const node = noodel.findNodeById("someNode");
+                            <code class="language-js">
+                                const noodel = new Noodel(...);
+                                const node = noodel.findNodeById("someNode");
 
-                            // move to the next node
-                            noodel.moveForward();
+                                // move to the next node
+                                noodel.moveForward();
 
-                            // move 2 steps back towards ancestors
-                            noodel.moveOut(2);
+                                // move 2 steps back towards ancestors
+                                noodel.moveOut(2);
 
-                            // move to the 3rd branch in the active tree
-                            noodel.setFocalLevel(3);
+                                // move to the 3rd branch in the active tree
+                                noodel.setFocalLevel(3);
 
-                            // jump to a specific node
-                            node.jumpToFocus();
-                        </code>
-                    </pre>
+                                // jump to a specific node
+                                node.jumpToFocus();
+                            </code>
+                        </pre>
                     </div>
                     <div class="node">
-                        <h3>Updating node properties</h3>
+                        <h4>Updating node properties</h4>
                         <pre>
                             <code class="language-js">
                                 const node = noodel.findNodeById("someNode");
@@ -849,13 +843,12 @@
                         <div class="node">
                             <p>
                                 Note that updating content replaces the original content by replacing the innerHTML of
-                                the container.
-                                The original content elements will be removed.
+                                the container. The original content elements will be removed.
                             </p>
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Node insertion and deletion</h3>
+                        <h4>Node insertion and deletion</h4>
                         <pre>
                             <code class="language-js">
                                 const rootNode = new Noodel([{}]).getRoot();
@@ -896,7 +889,7 @@
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Changing state while not mounted</h3>
+                        <h4>View state persistence</h4>
                         <p>
                             The noodel's view state is independent of whether it's mounted or not. You can
                             mutate it while the noodel is not mounted and the change will persist.
@@ -921,20 +914,19 @@
                 <div class="node">
                     <h3>Layout and resize</h3>
                     <div class="node">
-                        <h3>Layout options</h3>
+                        <h4>Layout options</h4>
                         <p>
                             Noodel has a variety of layout options that, when used in combination, can customize
                             the layout in almost every way you can think of.
                         </p>
                         <p>
-                            To use these options fully, you must understand the concepts of the branch axis and
+                            To use these options properly, you need to understand the concepts of the branch axis and
                             the trunk axis, which are used in place of the horizontal and vertical axes depending on the
-                            noodel's
-                            orientation.
+                            noodel's orientation.
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Orientation and branch direction</h3>
+                        <h4>Orientation and branch direction</h4>
                         <p>
                             The <code class="language-js">orientation</code> option specifies the direction of the
                             <i>trunk axis</i>, and can be either ltr (default), rtl, ttb (top-to-bottom) and btt
@@ -942,31 +934,28 @@
                         </p>
                         <p>
                             The <code class="language-js">branch direction</code> option specifies how a branch layout
-                            its nodes,
-                            and can be either "normal" (default) or "reverse". When
+                            its nodes, and can be either "normal" (default) or "reverse". When
                             the trunk axis is the horizontal axis (i.e. ltr or rtl), "normal" puts nodes from top to
                             bottom, and "reverse" the opposite. When the trunk axis is the vertical axis,
                             "normal" puts nodes from left to right, and "reverse" the opposite.
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Focal offsets and anchor offsets</h3>
+                        <h4>Focal offsets and anchor offsets</h4>
                         <p>
                             The focal offsets specify the "snap-to lines" on the canvas where the focal branch and
-                            active nodes
-                            align to, on their respective axis. These are calculated as a function of the canvas length,
+                            active nodes align to, on their respective axis. These are calculated as a function of the canvas length,
                             and defaults to 1/2 of the canvas length (i.e. the center).
                         </p>
                         <p>
                             The anchor offsets specify the "snap-to lines" on each branch/node that should be aligned to
-                            the
-                            focal offset, on their respective axis, when they become focal or active.
+                            the focal offset, on their respective axis, when they become focal or active.
                             These are calculated as a function of the length of the branch/node,
-                            and defaults to 1/2 of their length (i.e. the center). These can be specified globally
-                            and/or
-                            customized on each individual node.
+                            and defaults to 1/2 of their length (i.e. the center). 
                         </p>
                         <p>
+                            These offsets can be specified globally
+                            and/or customized on each individual node.
                             When used in combination, you can decide how and where the branches and nodes align in a
                             highly flexible way.
                         </p>
@@ -987,15 +976,18 @@
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Resize management</h3>
+                        <h4>Handling element resize</h4>
                         <p>
-                            Starting from Noodel v3, automatic resize detection has been removed in favor of
-                            a manual approach, to address some limitations and improve performance. If the noodel is
+                            In Noodel v3, automatic resize detection has been removed in favor of
+                            a manual approach, to address some limitations and improve performance. 
+                        </p>
+                        <p>
+                            If the noodel is
                             mounted,
                             and something happens that causes the size of nodes/branches/canvas to change,
                             you should immediately call one of Noodel's various <code
                                 class="language-js">realign()</code>
-                            methods to capture the size change and reposition elements as necessary.
+                            methods to register the size change and reposition elements as necessary.
                         </p>
                         <pre>
                             <code class="language-js">
@@ -1012,9 +1004,9 @@
                             </code>
                         </pre>
                         <div class="node">
-                            <h3>Using realignAll()</h3>
+                            <h5>Using realignAll()</h5>
                             <p>
-                                The realignAll() method is a convenience method for realigning everything at once. This
+                                The <code class="language-js">realignAll()</code> method is a convenience method for realigning everything at once. This
                                 is useful
                                 in situations such as when everything is styled based on viewport units, and the
                                 viewport size changed.
@@ -1036,7 +1028,7 @@
                 <div class="node">
                     <h3>Routing</h3>
                     <div class="node">
-                        <h3>Summary</h3>
+                        <h4>Summary</h4>
                         <p>
                             Noodel has a routing capability which is enabled by default. This allows Noodel to control
                             the hash of your URL to sync with the location of the current focal node.
@@ -1055,11 +1047,10 @@
                         </div>
                     </div>
                     <div class="node">
-                        <h3>History push behavior</h3>
+                        <h4>History push behavior</h4>
                         <p>
                             Only explicit changes to the URL (e.g. by clicking on a link) will cause a new entry to be
-                            pushed to
-                            the browser history. Noodel uses
+                            pushed to the browser history. Noodel uses
                             <a href=https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
                                 target="_blank">history.replaceState()</a>
                             to replace the URL hash as you navigate around the noodel to prevent creating
@@ -1074,7 +1065,7 @@
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Caveat</h3>
+                        <h4>Caveat</h4>
                         <p>
                             You should use routing on one noodel per page only (ideally, when you use a single noodel
                             to control a site). Routing behaviour for multiple
@@ -1086,23 +1077,24 @@
                     <h3>Search</h3>
                     <div class="node">
                         <p>
-                            Due to the fact that Noodel does not use native scrolling, basic Ctrl+F search
-                            in browsers will not be able to jump to individual occurrences.
+                            Due to the fact that Noodel does not use native scrolling for its navigation, basic Ctrl+F search
+                            in browsers will not be able to jump to individual occurrences. You may need to implement your
+                            own search function for your noodel.
                         </p>
                         <p>
-                            Please see <a href="https://github.com/zlu883/noodel-search"
-                                target="_blank">noodel-search</a>
-                            for a simple DOM based text search plugin for Noodel.
+                            For a simple DOM based text search plugin for Noodel,
+                            see <a href="https://github.com/zlu883/noodel-search"
+                                target="_blank">noodel-search</a>.                           
                         </p>
                     </div>
                 </div>
                 <div class="node">
                     <h3>Styling your noodel</h3>
                     <div class="node" data-id="styling-summary">
-                        <h3>Summary</h3>
+                        <h4>Summary</h4>
                         <p>
                             You can control most aspects of Noodel's appearance using plain CSS, by extending/overriding
-                            Noodel's CSS classes, or by setting custom class/styles for individual nodes.
+                            Noodel's CSS classes, or by setting custom class/styles on individual nodes.
                         </p>
                         <p>
                             In addition, you have complete freedom in structuring and styling the content inside your
@@ -1110,20 +1102,20 @@
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Styling via Noodel's CSS classes</h3>
+                        <h4>Styling via Noodel's CSS classes</h4>
                         <p>
                             Noodel comes with a "core" stylesheet that determines the layout, and a theming stylesheet
-                            with a default grayscale theme. While you must keep the core stylesheet, you can override or
+                            with a default theme. While you must keep the core stylesheet, you can override or
                             replace the CSS rules in the theming stylesheet as you see fit.
                         </p>
                         <p>
                             All of Noodel's DOM elements have various built-in CSS classes attached dynamically.
-                            See <a href="#nd-canvas">CSS classes</a> in the API section for the list of classes you can
+                            See <a href="#css_classes">CSS classes</a> for the list of classes you can
                             work with.
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Styling via node-specific class/styles</h3>
+                        <h4>Styling via node-specific class/styles</h4>
                         <p>
                             You can specify custom class/styles for each node that will be applied to the
                             <code class="language-css">nd-node</code> element. This is useful when you need
@@ -1134,19 +1126,19 @@
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Controlling node size</h3>
+                        <h4>Controlling node size</h4>
                         <p>
                             The size of nodes are completely flexible - they are simply placed in a
-                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flex</a> container,
+                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flex container</a>,
                             and will grow or shrink to fit their content while respecting any CSS rules applied.
                         </p>
                         <p>
-                            This means you can control the size of nodes by setting their various height, width
+                            This means you can control the size of nodes by specifying their various height, width
                             and flex properties. In addition, you can style your content
                             and let them influence the size of their node containers.
                         </p>
                         <div class="node">
-                            <h3>Example: full-page carousel</h3>
+                            <h5>Example: full-page carousel</h5>
                             <p>
                                 As an example, it's very easy to use Noodel to create a full-page
                                 carousel site, with some simple CSS overrides:
@@ -1167,30 +1159,30 @@
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Controlling animations</h3>
+                        <h4>Controlling animations</h4>
                         <p>
-                            All animations are done via CSS transitions. This means you can control
+                            All animations in Noodel are done via CSS transitions. This means you can control
                             the duration and timing functions of all animations via CSS overrides of the corresponding
                             classes.
                         </p>
                         <p>
-                            See <a href="#nd-canvas">CSS classes</a> in the API section for the list of classes you can
-                            work with.
+                            Enter/leave animations make use of the <a
+                                href="https://v3.vuejs.org/guide/transitions-enterleave.html#transition-classes"
+                                target="_blank">transition classes</a> of Vue.js.
+                            You can apply any combination of them according to your needs.
                         </p>
-                        <div class="node" data-id="transition-classes">
-                            <p>
-                                Enter/leave animations make use of the <a
-                                    href="https://vuejs.org/v2/guide/transitions.html#Transition-Classes"
-                                    target="_blank">transition classes</a> of Vue.js.
-                                You can apply any combination of them according to your needs.
-                            </p>
-                        </div>
+                        <p>
+                            Movement animations use transitions of the CSS transform property. These should be specified
+                            on the nd-xxx-move classes for the corresponding element, and should only be specified
+                            on these classes. The move classes are always attached on their elements and temporarily
+                            removed when necessary to disable transform transitions.
+                        </p>
                     </div>
                 </div>
                 <div class="node">
                     <h3>Usage with Vue</h3>
                     <div class="node" data-id="usage-vue-summary">
-                        <h3>Summary</h3>
+                        <h4>Summary</h4>
                         <p>
                             Noodel uses Vue.js internally and hence provides integration with Vue out of the box.
                             Noodel is available as a Vue component, and also allows you to use Vue components
@@ -1198,10 +1190,10 @@
                         </p>
                     </div>
                     <div class="node">
-                        <h3>Using the Vue-less build</h3>
+                        <h4>Using the Vue-less build</h4>
                         <p>
                             If you are including Noodel and Vue's scripts directly in your
-                            HTML, it is recommended that you use Noodel's <a href="#note-on-builds">Vue-less
+                            HTML, it is recommended that you use Noodel's <a href="#vueless-build">Vue-less
                                 build</a>, alongside the Vue script used in your main project (Noodel requires Vue V3).
                             This prevents Vue from being included twice.
                         </p>
@@ -1211,13 +1203,13 @@
                         </p>
                         <div class="node">
                             <p>
-                                Noodel only needs Vue's runtime script. But if you need to compile templates in runtime
-                                you'll need to include Vue's compiler script yourself.
+                                Noodel only needs Vue's runtime script. If you need to compile templates in runtime
+                                you need to include Vue's compiler script separately.
                             </p>
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Using Noodel's Vue component</h3>
+                        <h4>Using Noodel's Vue component</h4>
                         <p>
                             Noodel's Vue component is exposed as a static variable on the Noodel class, which can be
                             used like any other Vue components. The way to use it is as follows:
@@ -1244,14 +1236,12 @@
                         <div class="node">
                             <p>
                                 Noodel's Vue component takes a single prop, <i>noodel</i>, which must be the internal
-                                state tree
-                                of a Noodel instance that you can obtain via <code
+                                state tree of a Noodel instance that you can obtain via <code
                                     class="language-js">getState()</code>.
                             </p>
                             <p>
                                 It is important that you do not modify this state tree yourself, but instead use the API
-                                methods
-                                provided on the Noodel instance.
+                                methods provided on the Noodel instance to do so.
                             </p>
                         </div>
                         <div class="node">
@@ -1264,16 +1254,16 @@
                         </div>
                         <div class="node">
                             <p>
-                                <img src="./alert-triangle.svg" class="link-icon" /> You do NOT need to call Noodel's
+                                <span style="font-size: 1.5em;">⚠️</span> You should NOT call Noodel's
                                 <code class="language-js">mount()</code>
                                 or <code class="language-js">unmount()</code> when using Noodel
                                 as a Vue component. It is simply a component that gets mounted and unmounted with your
-                                Vue instance!
+                                Vue instance.
                             </p>
                         </div>
                     </div>
                     <div class="node">
-                        <h3>Using Vue components as node content</h3>
+                        <h4>Using Vue components as node content</h4>
                         <p>
                             You can pass Vue components as node content and they will be rendered via Vue's dynamic
                             component feature, i.e.
@@ -1305,13 +1295,11 @@
                     <h3>TypeScript</h3>
                     <div class="node">
                         <p>
-                            Noodel is completely written in TypeScript, fully typed and documented, making
-                            development a breeze.
+                            Noodel is completely written in TypeScript, fully typed and documented.
                         </p>
                         <p>
                             You don't need to install any additional type declarations - they come bundled out of the
-                            box
-                            when you install via npm.
+                            box when you install via npm.
                         </p>
                     </div>
                 </div>
@@ -1320,8 +1308,7 @@
                     <div class="node">
                         <p>Noodel is targeted to work on all major modern browsers.</p>
                         <p>Support for IE 10 and 11 is best-effort only - Noodel <i>should</i> work on these browsers,
-                            but
-                            there may be quirks and bugs in some features.</p>
+                            but there may be quirks and bugs in some features.</p>
                         <p>IE 9 and below are not supported.</p>
                     </div>
                 </div>
@@ -1515,7 +1502,7 @@
                         <div class="node">
                             <code class="language-ts">on(ev: string, listener: Function)</code>
                             <p>
-                                Attach a listener for the given event.
+                                Attach a listener for the given event. <a href="#focalNodeChange">See here</a> for the list of events available.
                             </p>
                         </div>
                         <div class="node">
@@ -1527,7 +1514,7 @@
                     </div>
                 </div>
                 <div class="node" data-class="menu-item">
-                    <h4>Node<span class="label">class</span></h4>
+                    <h4>NoodelNode<span class="label">class</span></h4>
                     <p>The view model of a node. Has 2-way binding with the view.</p>
                     <div class="node">
                         <h5>Query</h5>
@@ -1888,7 +1875,7 @@
                         <div class="node">
                             <code class="language-ts">on(ev: string, listener: Function)</code>
                             <p>
-                                Attach an event listener on this node. See here for the list of events available.
+                                Attach an event listener on this node. <a href="#enterFocus">See here</a> for the list of events available.
                             </p>
                         </div>
                         <div class="node">
@@ -1936,8 +1923,7 @@
                         <p>
                             Content for this node's child branch. If is a string, will be inserted as innerHTML
                             of the nd-branch-content-box element. Can also be a ComponentContent object that wraps a Vue
-                            component.
-                            Only rendered if this node has a child branch (i.e. has at least 1 child).
+                            component. Only rendered if this node has a child branch (i.e. has at least 1 child).
                         </p>
                     </div>
                     <div class="node">
@@ -2194,7 +2180,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="node" data-class="menu-item">
+                <div class="node" data-class="menu-item" data-id="nodecss">
                     <h4>NodeCSS<span class="label">interface</span></h4>
                     <p>Object template used for specifying custom CSS classes and styles on nodes.</p>
                     <div class="node">
@@ -2234,12 +2220,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="node" data-class="menu-item">
-                    <h4>Events<span class="label">interface</span></h4>
-                    <p>List of events you can listen to.</p>
+                <div class="node" data-class="menu-item" data-id="events">
+                    <h4>Events</h4>
+                    <p>Lists of available events.</p>
                     <div class="node">
                         <h5>Noodel</h5>
-                        <div class="node">
+                        <div class="node" data-id="focalNodeChange">
                             <code class="language-ts">focalNodeChange</code>
                             <p>
                                 Event triggered every time the focal node has changed.
@@ -2286,7 +2272,7 @@
                     </div>
                     <div class="node">
                         <h5>NoodelNode</h5>
-                        <div class="node">
+                        <div class="node" data-id="enterFocus">
                             <code class="language-ts">enterFocus</code>
                             <p>
                                 Event triggered after this node entered focus.
@@ -2336,222 +2322,193 @@
                         </div>                       
                     </div>
                 </div>
-                <div class="node" data-class="menu-item">
-                    <h3>CSS classes</h3>
-                    <p>List of CSS classes you can use for styling.</p>
-                    <div class="node" data-id="nd-canvas">
-                        <code class="language-css">nd-canvas</code>
-                        <p>
-                            Outermost container of the noodel that processes all inputs.
-                            Use this to style the canvas size and background.
-                        </p>
-                    </div>
-                    <div class="node" data-id="nd-canvas">
-                        <code class="language-css">nd-canvas-ltr, nd-canvas-rtl, nd-canvas-ttb, nd-canvas-btt</code>
-                        <p>
-                            Class applied to the canvas element depending on the current trunk orientation.
-                            Use this with descendent combinators to style elements under a specific orientation.
-                        </p>
-                    </div>
-                    <div class="node" data-id="nd-canvas">
-                        <code class="language-css">nd-canvas-normal, nd-canvas-reverse</code>
-                        <p>
-                            Class applied to the canvas element depending on the current branch direction.
-                            Use this with descendent combinators to style elements under a specific branch direction.
-                        </p>
-                    </div>
+                <div class="node" data-class="menu-item" data-id="css_classes">
+                    <h4>CSS classes</h4>
+                    <p>Lists of CSS classes provided and their associated elements.</p>
                     <div class="node">
-                        <code
-                            class="language-css">nd-limit, nd-limit-left, nd-limit-right, nd-limit-top, nd-limit-bottom</code>
-                        <p>
-                            Classes applied to the limit indicators (the bars that come up when you reach the view
-                            limits).
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-limit-[transition class]</code>
-                        <p>
-                            <a href="#transition-classes">Transition classes</a> for enter/leave of limit indicators.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-trunk</code>
-                        <p>
-                            The trunk container. You should not need to style this element directly in most cases.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-trunk-move</code>
-                        <p>
-                            Class applied to the <code class="language-css">nd-trunk</code> element when moving in the
-                            trunk axis.
-                            Use this to control the timing and duration of the movement.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-box</code>
-                        <p>
-                            Outermost container of a branch that is responsible for its visibility. Occupies 100% length
-                            of the canvas.
-                            Avoid styling this element directly, use <code
-                                class="language-css">nd-branch-backdrop</code> instead.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-box-focal</code>
-                        <p>
-                            Applied to the focal <code class="language-css">nd-branch-box</code> element.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-box-[transition class]</code>
-                        <p>
-                            <a href="#transition-classes">Transition classes</a> for enter/leave of branches.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-backdrop</code>
-                        <p>
-                            Absolute positioned child of the <code class="language-css">nd-branch-box</code> element
-                            that is optionally rendered.
-                            Prefer to style this instead of <code class="language-css">nd-branch-box</code>
-                            to prevent conflicts with the visibility mechanism.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-backdrop-focal</code>
-                        <p>
-                            Applied to the focal <code class="language-css">nd-branch-backdrop</code> element.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch</code>
-                        <p>
-                            Outer container for the items of a branch that is responsible for its sliding movement.
-                            Avoid styling this element directly, use <code class="language-css">nd-branch-inner</code>
-                            instead.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-focal</code>
-                        <p>
-                            Applied to the focal <code class="language-css">nd-branch</code> element.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-move</code>
-                        <p>
-                            Class applied to an <code class="language-css">nd-branch</code> element when moving in the
-                            branch axis.
-                            Use this to control the timing and duration of the movement.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-inner</code>
-                        <p>
-                            Immediate container for the items of a branch. Prefer to style this instead of <code
-                                class="language-css">nd-branch</code>
-                            to prevent conflicts with the slide mechanism.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-branch-inner-focal</code>
-                        <p>
-                            Applied to the focal <code class="language-css">nd-branch-inner</code> element.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-node-box</code>
-                        <p>
-                            Outermost container of a node.
-                            Avoid styling this element directly, use <code class="language-css">nd-node</code> instead.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-node-box-active</code>
-                        <p>
-                            Applied to an active <code class="language-css">nd-node-box</code> element.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-node</code>
-                        <p>
-                            Immediate container of your node content. Use this class to control the size and aesthetics
-                            of your nodes.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-node-active</code>
-                        <p>
-                            Applied to an active <code class="language-css">nd-node</code> element.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-node-[transition class]</code>
-                        <p>
-                            <a href="#transition-classes">Transition classes</a> for enter/leave of nodes
-                            during node insert/delete.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-node-move</code>
-                        <p>
-                            Applied to sibling nodes during node insert/delete. Use this class
-                            to control the animation of siblings as they change position.
-                        </p>
+                        <h5>Canvas</h5>   
                         <div class="node">
+                            <code class="language-css">nd-canvas</code>
                             <p>
-                                Sibling animation during node insert/delete depend on transitioning the branch
-                                and nodes simultaneously. This means they should have identical duration and timing
-                                functions - otherwise it will cause a "jump" in the animation.
+                                Outermost container of the noodel that processes all inputs.
                             </p>
                         </div>
+                        <div class="node">
+                            <code class="language-css">nd-canvas-ltr, nd-canvas-rtl, nd-canvas-ttb, nd-canvas-btt, nd-canvas-normal, nd-canvas-reverse</code>
+                            <p>
+                                Classes applied to the nd-canvas element depending on the current orientation and branch direction.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-canvas-inspect</code>
+                            <p>
+                                Class applied to the nd-canvas element when in inspect mode.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code
+                                class="language-css">nd-limit</code>
+                            <p>
+                                The limit indicators (i.e. the bars that appear when you try to go beyond the view limits).
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code
+                                class="language-css">nd-limit, nd-limit-left, nd-limit-right, nd-limit-top</code>
+                            <p>
+                                Classes applied to the nd-limit elements based on their absolute locations.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code
+                                class="language-css">nd-limit-trunk-start, nd-limit-trunk-end, nd-limit-branch-start, nd-limit-branch-end</code>
+                            <p>
+                                Classes applied to the nd-limit elements based on their locations relative to the trunk and branch axes.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-limit-[transition class]</code>
+                            <p>
+                                <a href="#transition-classes">Transition classes</a> for enter/leave transitions of limit indicators.
+                            </p>
+                        </div>                     
                     </div>
                     <div class="node">
-                        <code class="language-css">nd-node-inspect</code>
-                        <p>
-                            Applied to the focal node during inspect mode.
-                        </p>
+                        <h5>Trunk</h5>  
+                        <div class="node">
+                            <code class="language-css">nd-trunk</code>
+                            <p>
+                                The trunk element. You should not need to style this element directly in most cases.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-trunk-move</code>
+                            <p>
+                                Class applied to the nd-trunk element for specifying the transition effects of snap movements
+                                in the trunk axis.
+                            </p>
+                        </div>                      
                     </div>
                     <div class="node">
-                        <code class="language-css">nd-inspect-backdrop</code>
-                        <p>
-                            The backdrop element that appears during inspect mode.
-                        </p>
+                        <h5>Branch</h5> 
+                        <div class="node">
+                            <code class="language-css">nd-branch</code>
+                            <p>
+                                Outermost container of a branch that occupies 100% length of the canvas on the branch axis.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-branch-focal</code>
+                            <p>
+                                Applied to the nd-branch element of the focal branch.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-branch-level-[x]</code>
+                            <p>
+                                Applied to every nd-branch element where x is the level of the branch.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-branch-[transition class]</code>
+                            <p>
+                                <a href="#transition-classes">Transition classes</a> for enter/leave transitions of branches.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-branch-content-box</code>
+                            <p>
+                                The container element for branch content specified for the branch.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-branch-slider</code>
+                            <p>
+                                Direct container of nodes in a branch, and responsible for its movement in the branch axis.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-branch-slider-move</code>
+                            <p>
+                                Applied to the focal nd-branch element.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-branch-move</code>
+                            <p>
+                                Class applied to nd-branch elements for specifying the transition effects of snap movements
+                                in the branch axis.
+                            </p>
+                        </div>                       
                     </div>
                     <div class="node">
-                        <code class="language-css">nd-inspect-backdrop-[transition class]</code>
-                        <p>
-                            <a href="#transition-classes">Transition classes</a> for enter/leave of the backdrop.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-child-indicator</code>
-                        <p>
-                            Class for the child indicator element (the "arrow" that indicates
-                            nodes with children).
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-child-indicator-active</code>
-                        <p>
-                            Applied to the <code class="language-css">nd-child-indicator</code> of an active node.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-child-indicator-expanded</code>
-                        <p>
-                            Applied to the <code class="language-css">nd-child-indicator</code> of a node that has
-                            visible children.
-                        </p>
-                    </div>
-                    <div class="node">
-                        <code class="language-css">nd-child-indicator-[transition class]</code>
-                        <p>
-                            <a href="#transition-classes">Transition classes</a> for enter/leave of child indicators
-                            during node insert/delete.
-                        </p>
-                    </div>
+                        <h5>Node</h5>  
+                        <div class="node">
+                            <code class="language-css">nd-node</code>
+                            <p>
+                                Outermost container of a node.
+                            </p>
+                        </div>   
+                        <div class="node">
+                            <code class="language-css">nd-node-active</code>
+                            <p>
+                                Applied to nd-node elements that are active.
+                            </p>
+                        </div> 
+                        <div class="node">
+                            <code class="language-css">nd-node-[transition class]</code>
+                            <p>
+                                <a href="#transition-classes">Transition classes</a> for enter/leave of nodes
+                                during node insertion and deletion.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-node-move</code>
+                            <p>
+                                Class applied to nd-node elements for specifying the transition effects of FLIP animations
+                                during node insertion, deletion and reordering.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-content-box</code>
+                            <p>
+                                Direct container of the content in a node.
+                            </p>
+                        </div>   
+                        <div class="node">
+                            <code class="language-css">nd-inspect-backdrop</code>
+                            <p>
+                                The backdrop element that appears during inspect mode. Note that
+                                this element is a child of the nd-node element.
+                            </p>
+                        </div>  
+                        <div class="node">
+                            <code class="language-css">nd-inspect-backdrop-[transition class]</code>
+                            <p>
+                                <a href="#transition-classes">Transition classes</a> for enter/leave of the backdrop.
+                            </p>
+                        </div>     
+                        <div class="node">
+                            <code class="language-css">nd-child-indicator</code>
+                            <p>
+                                The child indicator element in a node that is rendered when the node has children.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-child-indicator-expanded</code>
+                            <p>
+                                Applied to the nd-child-indicator element of a node that has
+                                visible children.
+                            </p>
+                        </div>
+                        <div class="node">
+                            <code class="language-css">nd-child-indicator-[transition class]</code>
+                            <p>
+                                <a href="#transition-classes">Transition classes</a> for enter/leave of child indicators
+                                during node insert/delete.
+                            </p>
+                        </div>        
+                    </div>                                                             
                 </div>
             </div>
             <div class="node" data-class="menu-item">
