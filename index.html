@@ -34,18 +34,18 @@
     <form id="searchBar" class="hidden">
         <input id="searchInput" type="text">
         <div id="searchIndicator">
-            <button id="searchIcon" type="submit"><img src="search-dark.svg"></button>
+            <button id="searchIcon" type="submit"><img src="assets/search-dark.svg"></button>
             <span id="searchCount" class="hidden"></span>
         </div>
         <button id="searchNext" type="button" disabled>
-            <img src="chevron-down.svg">
+            <img src="assets/chevron-down.svg">
         </button>
         <button id="searchPrev" type="button" disabled>
-            <img src="chevron-up.svg">
+            <img src="assets/chevron-up.svg">
         </button>
     </form>
     <button id="searchButton" class="hidden">
-        <img src="search.svg">
+        <img src="assets/search.svg">
     </button>
     <div id="noodel">
         <div class="node" data-class-content-box="landing-node">
@@ -910,6 +910,50 @@
                             </code>
                         </pre>
                     </div>
+                    <div class="node">
+                        <h4>Using nextTick()</h4>
+                        <p>
+                            When using Noodel's API, all changes to Noodel's <i>view model</i> are synchronous,
+                            while any DOM updates triggered by these changes will be asynchronous. This means that,
+                            if you need to do operations that depends on the updated DOM state, you must
+                            wait for the updates to settle before doing so.
+                        </p>
+                        <p>
+                            The <code class="language-js">nextTick()</code> function is Noodel's preferred
+                            way to wait for DOM updates to fully complete and settle.
+                            One common use case is to wait for the view to mount before querying a DOM element:
+                        </p>
+                        <pre>
+                            <code class="language-js">                                
+                                noodel.mount("#noodel");
+                                noodel.nextTick(() => {
+                                    // gets the canvas element after the view is actually mounted
+                                    const canvasEl = noodel.getEl();
+                                });
+                            </code>
+                        </pre>
+                        <div class="node">
+                            <p>
+                                Another use for <code class="language-js">nextTick()</code> is to properly sequence
+                                certain visual effects:
+                            </p>
+                            <pre>
+                                <code class="language-js">     
+                                    // this operation inserts a node, then jumps to it                               
+                                    
+                                    const newNode = someNode.insertChildren([{}], 1)[0];                                     
+                                    // Because it takes one DOM update cycle to capture the size of new nodes, the movement may glitch if you do this synchronously. Using nextTick will make the animation smooth.
+                                    noodel.nextTick(() => {                                      
+                                        newNode.jumpToFocus();
+                                    });
+                                </code>
+                            </pre>
+                            <p>
+                                If you find the visual effects of some compound operations not going as expected, often
+                                <code class="language-js">nextTick()</code> will do the trick.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="node">
                     <h3>Layout and resize</h3>
@@ -1502,7 +1546,7 @@
                         <div class="node">
                             <code class="language-ts">on(ev: string, listener: Function)</code>
                             <p>
-                                Attach a listener for the given event. <a href="#focalNodeChange">See here</a> for the list of events available.
+                                Attach a listener for the given event.
                             </p>
                         </div>
                         <div class="node">
@@ -1510,6 +1554,53 @@
                             <p>
                                 Remove a listener for the given event.
                             </p>
+                        </div>
+                        <div class="node" data-class="menu-item" data-id="events">
+                            <h5>Available events</h5>
+                            <div class="node">
+                                <code class="language-ts">focalNodeChange</code>
+                                <p>
+                                    Event triggered every time the focal node has changed.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">(current: Node, prev: Node) => any</code></li>
+                                    <ul>
+                                        <li><code class="language-ts">current</code> the current focal node</li>
+                                        <li><code class="language-ts">prev</code> the previous focal node</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="node">
+                                <code class="language-ts">focalParentChange</code>
+                                <p>
+                                    Event triggered every time the focal parent has changed.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">(current: Node, prev: Node) => any</code></li>
+                                    <ul>
+                                        <li><code class="language-ts">current</code> the current focal node</li>
+                                        <li><code class="language-ts">prev</code> the previous focal node</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="node">
+                                <code class="language-ts">enterInspectMode</code>
+                                <p>
+                                    Event triggered after entering inspect mode.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">() => any</code></li>
+                                </ul>
+                            </div>
+                            <div class="node">
+                                <code class="language-ts">exitInspectMode</code>
+                                <p>
+                                    Event triggered after exiting inspect mode.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">() => any</code></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1875,7 +1966,7 @@
                         <div class="node">
                             <code class="language-ts">on(ev: string, listener: Function)</code>
                             <p>
-                                Attach an event listener on this node. <a href="#enterFocus">See here</a> for the list of events available.
+                                Attach an event listener on this node.
                             </p>
                         </div>
                         <div class="node">
@@ -1883,6 +1974,57 @@
                             <p>
                                 Remove an event listener from this node.
                             </p>
+                        </div>
+                        <div class="node">
+                            <h5>Available events</h5>
+                            <div class="node">
+                                <code class="language-ts">enterFocus</code>
+                                <p>
+                                    Event triggered after this node entered focus.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">(prev: NoodelNode) => any</code></li>
+                                    <ul>
+                                        <li><code class="language-ts">prev</code> the previous focal node</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="node">
+                                <code class="language-ts">exitFocus</code>
+                                <p>
+                                    Event triggered after this node exited focus.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">(current: NoodelNode) => any</code></li>
+                                    <ul>
+                                        <li><code class="language-ts">current</code> the current focal node</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="node">
+                                <code class="language-ts">childrenEnterFocus</code>
+                                <p>
+                                    Event triggered after this node's child branch entered focus.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">(prev: NoodelNode) => any</code></li>
+                                    <ul>
+                                        <li><code class="language-ts">prev</code> the previous focal parent</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="node">
+                                <code class="language-ts">childrenExitFocus</code>
+                                <p>
+                                    Event triggered after this node's child branch exited focus.
+                                </p>
+                                <ul>
+                                    <li>Listener: <code class="language-ts">(current: NoodelNode) => any</code></li>
+                                    <ul>
+                                        <li><code class="language-ts">current</code> the current focal parent</li>
+                                    </ul>
+                                </ul>
+                            </div>                       
                         </div>
                     </div>
                 </div>
@@ -2218,108 +2360,6 @@
                         <p>
                             CSS applied to the nd-branch-slider element.
                         </p>
-                    </div>
-                </div>
-                <div class="node" data-class="menu-item" data-id="events">
-                    <h4>Events</h4>
-                    <p>Lists of available events.</p>
-                    <div class="node">
-                        <h5>Noodel</h5>
-                        <div class="node" data-id="focalNodeChange">
-                            <code class="language-ts">focalNodeChange</code>
-                            <p>
-                                Event triggered every time the focal node has changed.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">(current: Node, prev: Node) => any</code></li>
-                                <ul>
-                                    <li><code class="language-ts">current</code> the current focal node</li>
-                                    <li><code class="language-ts">prev</code> the previous focal node</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div class="node">
-                            <code class="language-ts">focalParentChange</code>
-                            <p>
-                                Event triggered every time the focal parent has changed.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">(current: Node, prev: Node) => any</code></li>
-                                <ul>
-                                    <li><code class="language-ts">current</code> the current focal node</li>
-                                    <li><code class="language-ts">prev</code> the previous focal node</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div class="node">
-                            <code class="language-ts">enterInspectMode</code>
-                            <p>
-                                Event triggered after entering inspect mode.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">() => any</code></li>
-                            </ul>
-                        </div>
-                        <div class="node">
-                            <code class="language-ts">exitInspectMode</code>
-                            <p>
-                                Event triggered after exiting inspect mode.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">() => any</code></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="node">
-                        <h5>NoodelNode</h5>
-                        <div class="node" data-id="enterFocus">
-                            <code class="language-ts">enterFocus</code>
-                            <p>
-                                Event triggered after this node entered focus.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">(prev: NoodelNode) => any</code></li>
-                                <ul>
-                                    <li><code class="language-ts">prev</code> the previous focal node</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div class="node">
-                            <code class="language-ts">exitFocus</code>
-                            <p>
-                                Event triggered after this node exited focus.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">(current: NoodelNode) => any</code></li>
-                                <ul>
-                                    <li><code class="language-ts">current</code> the current focal node</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div class="node">
-                            <code class="language-ts">childrenEnterFocus</code>
-                            <p>
-                                Event triggered after this node's child branch entered focus.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">(prev: NoodelNode) => any</code></li>
-                                <ul>
-                                    <li><code class="language-ts">prev</code> the previous focal parent</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div class="node">
-                            <code class="language-ts">childrenExitFocus</code>
-                            <p>
-                                Event triggered after this node's child branch exited focus.
-                            </p>
-                            <ul>
-                                <li>Listener: <code class="language-ts">(current: NoodelNode) => any</code></li>
-                                <ul>
-                                    <li><code class="language-ts">current</code> the current focal parent</li>
-                                </ul>
-                            </ul>
-                        </div>                       
                     </div>
                 </div>
                 <div class="node" data-class="menu-item" data-id="css_classes">
